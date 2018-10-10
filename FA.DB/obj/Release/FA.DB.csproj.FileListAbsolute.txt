@@ -1,0 +1,4 @@
+D:\Dev Project\BJ_FA\BJ_FAautomaion\FA.DB\bin\Release\FA.DB.dll
+D:\Dev Project\BJ_FA\BJ_FAautomaion\FA.DB\bin\Release\FA.DB.pdb
+D:\Dev Project\BJ_FA\BJ_FAautomaion\FA.DB\obj\Release\FA.DB.dll
+D:\Dev Project\BJ_FA\BJ_FAautomaion\FA.DB\obj\Release\FA.DB.pdb

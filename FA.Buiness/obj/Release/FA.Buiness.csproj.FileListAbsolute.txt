@@ -1,0 +1,10 @@
+D:\Dev Project\BJ_FA\BJ_FAautomaion\FA.Buiness\bin\Release\FA.Buiness.dll
+D:\Dev Project\BJ_FA\BJ_FAautomaion\FA.Buiness\bin\Release\FA.Buiness.pdb
+D:\Dev Project\BJ_FA\BJ_FAautomaion\FA.Buiness\bin\Release\FA.Common.dll
+D:\Dev Project\BJ_FA\BJ_FAautomaion\FA.Buiness\bin\Release\FA.DB.dll
+D:\Dev Project\BJ_FA\BJ_FAautomaion\FA.Buiness\bin\Release\log4net.dll
+D:\Dev Project\BJ_FA\BJ_FAautomaion\FA.Buiness\bin\Release\FA.Common.pdb
+D:\Dev Project\BJ_FA\BJ_FAautomaion\FA.Buiness\bin\Release\FA.DB.pdb
+D:\Dev Project\BJ_FA\BJ_FAautomaion\FA.Buiness\obj\Release\FA.Buiness.csprojResolveAssemblyReference.cache
+D:\Dev Project\BJ_FA\BJ_FAautomaion\FA.Buiness\obj\Release\FA.Buiness.dll
+D:\Dev Project\BJ_FA\BJ_FAautomaion\FA.Buiness\obj\Release\FA.Buiness.pdb

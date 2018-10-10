@@ -1,0 +1,67 @@
+D:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\bin\Debug\BJ_FAautomaion.exe.config
+D:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\bin\Debug\BJ_FAautomaion.exe
+D:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\bin\Debug\BJ_FAautomaion.pdb
+D:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\bin\Debug\IrisSkin2.dll
+D:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\bin\Debug\log4net.dll
+D:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+D:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\obj\Debug\BJ_FAautomaion.csprojResolveAssemblyReference.cache
+D:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\obj\Debug\BJ_FAautomaion.frmAboutBox.resources
+D:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\obj\Debug\BJ_FAautomaion.frmLogin.resources
+D:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\obj\Debug\BJ_FAautomaion.frmMain.resources
+D:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\obj\Debug\BJ_FAautomaion.Properties.Resources.resources
+D:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\obj\Debug\BJ_FAautomaion.csproj.GenerateResource.Cache
+D:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\obj\Debug\BJ_FAautomaion.exe
+D:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\obj\Debug\BJ_FAautomaion.pdb
+D:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\bin\Debug\Microsoft.Office.Interop.Excel.dll
+D:\Dev Project\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\bin\Debug\BJ_FAautomaion.exe.config
+D:\Dev Project\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\obj\Debug\BJ_FAautomaion.exe
+D:\Dev Project\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\obj\Debug\BJ_FAautomaion.pdb
+D:\Dev Project\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\bin\Debug\BJ_FAautomaion.exe
+D:\Dev Project\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\bin\Debug\BJ_FAautomaion.pdb
+D:\Dev Project\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\bin\Debug\IrisSkin2.dll
+D:\Dev Project\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\bin\Debug\log4net.dll
+D:\Dev Project\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+D:\Dev Project\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\obj\Debug\BJ_FAautomaion.csprojResolveAssemblyReference.cache
+D:\Dev Project\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\obj\Debug\BJ_FAautomaion.frmAboutBox.resources
+D:\Dev Project\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\obj\Debug\BJ_FAautomaion.frmLogin.resources
+D:\Dev Project\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\obj\Debug\BJ_FAautomaion.frmMain.resources
+D:\Dev Project\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\obj\Debug\BJ_FAautomaion.Properties.Resources.resources
+D:\Dev Project\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\obj\Debug\BJ_FAautomaion.csproj.GenerateResource.Cache
+D:\Dev Project\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\obj\Debug\BJ_FAautomaion.frmMessageShow.resources
+D:\Dev Project\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\bin\Debug\FA.Buiness.dll
+D:\Dev Project\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\bin\Debug\FA.Common.dll
+D:\Dev Project\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\bin\Debug\FA.DB.dll
+D:\Dev Project\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\bin\Debug\FA.Buiness.pdb
+D:\Dev Project\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\bin\Debug\FA.Common.pdb
+D:\Dev Project\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\bin\Debug\FA.DB.pdb
+D:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\bin\Debug\FA.Buiness.dll
+D:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\bin\Debug\FA.Common.dll
+D:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\bin\Debug\FA.DB.dll
+D:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\bin\Debug\FA.Buiness.pdb
+D:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\bin\Debug\FA.Common.pdb
+D:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\bin\Debug\FA.DB.pdb
+D:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\obj\Debug\BJ_FAautomaion.frmMessageShow.resources
+F:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\bin\Debug\BJ_FAautomaion.exe.config
+F:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\obj\Debug\BJ_FAautomaion.exe
+F:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\obj\Debug\BJ_FAautomaion.pdb
+F:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\bin\Debug\BJ_FAautomaion.exe
+F:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\bin\Debug\BJ_FAautomaion.pdb
+F:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\bin\Debug\FA.Buiness.dll
+F:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\bin\Debug\FA.Common.dll
+F:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\bin\Debug\FA.DB.dll
+F:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\bin\Debug\IrisSkin2.dll
+F:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\bin\Debug\log4net.dll
+F:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+F:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\bin\Debug\FA.Buiness.pdb
+F:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\bin\Debug\FA.Common.pdb
+F:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\bin\Debug\FA.DB.pdb
+F:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\obj\Debug\BJ_FAautomaion.csprojResolveAssemblyReference.cache
+F:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\obj\Debug\BJ_FAautomaion.frmAboutBox.resources
+F:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\obj\Debug\BJ_FAautomaion.frmLogin.resources
+F:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\obj\Debug\BJ_FAautomaion.frmMain.resources
+F:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\obj\Debug\BJ_FAautomaion.frmMessageShow.resources
+F:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\obj\Debug\BJ_FAautomaion.Properties.Resources.resources
+F:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\obj\Debug\BJ_FAautomaion.csproj.GenerateResource.Cache
+D:\Dev Project\PIC_control\BJ_FAautomaion\BJ_FAautomaion\bin\Debug\BJ_FAautomaion.exe.config
+D:\Dev Project\PIC_control\BJ_FAautomaion\BJ_FAautomaion\obj\Debug\BJ_FAautomaion.exe
+D:\Dev Project\PIC_control\BJ_FAautomaion\BJ_FAautomaion\obj\Debug\BJ_FAautomaion.pdb

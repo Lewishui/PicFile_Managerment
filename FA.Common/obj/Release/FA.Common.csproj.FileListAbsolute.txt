@@ -1,0 +1,5 @@
+D:\Dev Project\BJ_FA\BJ_FAautomaion\FA.Common\bin\Release\FA.Common.dll
+D:\Dev Project\BJ_FA\BJ_FAautomaion\FA.Common\bin\Release\FA.Common.pdb
+D:\Dev Project\BJ_FA\BJ_FAautomaion\FA.Common\obj\Release\FA.Common.csprojResolveAssemblyReference.cache
+D:\Dev Project\BJ_FA\BJ_FAautomaion\FA.Common\obj\Release\FA.Common.dll
+D:\Dev Project\BJ_FA\BJ_FAautomaion\FA.Common\obj\Release\FA.Common.pdb

@@ -1,0 +1,24 @@
+D:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\FA.DB\obj\Debug\FA.DB.csprojResolveAssemblyReference.cache
+D:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\FA.DB\bin\Debug\FA.DB.dll
+D:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\FA.DB\bin\Debug\FA.DB.pdb
+D:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\FA.DB\obj\Debug\FA.DB.dll
+D:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\FA.DB\obj\Debug\FA.DB.pdb
+D:\Dev Project\BJ_FA\BJ_FAautomaion\FA.DB\bin\Debug\FA.DB.dll
+D:\Dev Project\BJ_FA\BJ_FAautomaion\FA.DB\bin\Debug\FA.DB.pdb
+D:\Dev Project\BJ_FA\BJ_FAautomaion\FA.DB\obj\Debug\FA.DB.dll
+D:\Dev Project\BJ_FA\BJ_FAautomaion\FA.DB\obj\Debug\FA.DB.pdb
+F:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\FA.DB\bin\Debug\FA.DB.dll
+F:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\FA.DB\bin\Debug\FA.DB.pdb
+F:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\FA.DB\obj\Debug\FA.DB.csprojResolveAssemblyReference.cache
+F:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\FA.DB\obj\Debug\FA.DB.dll
+F:\mysteap\Devpro\BJ_FA\BJ_FAautomaion\FA.DB\obj\Debug\FA.DB.pdb
+D:\Dev Project\PIC_control\BJ_FAautomaion\FA.DB\bin\Debug\FA.DB.dll
+D:\Dev Project\PIC_control\BJ_FAautomaion\FA.DB\bin\Debug\FA.DB.pdb
+D:\Dev Project\PIC_control\BJ_FAautomaion\FA.DB\obj\Debug\FA.DB.csprojResolveAssemblyReference.cache
+D:\Dev Project\PIC_control\BJ_FAautomaion\FA.DB\obj\Debug\FA.DB.dll
+D:\Dev Project\PIC_control\BJ_FAautomaion\FA.DB\obj\Debug\FA.DB.pdb
+D:\Dev Project\PIC_control\PicFile_Managerment\FA.DB\bin\Debug\FA.DB.dll
+D:\Dev Project\PIC_control\PicFile_Managerment\FA.DB\bin\Debug\FA.DB.pdb
+D:\Dev Project\PIC_control\PicFile_Managerment\FA.DB\obj\Debug\FA.DB.csprojResolveAssemblyReference.cache
+D:\Dev Project\PIC_control\PicFile_Managerment\FA.DB\obj\Debug\FA.DB.dll
+D:\Dev Project\PIC_control\PicFile_Managerment\FA.DB\obj\Debug\FA.DB.pdb
