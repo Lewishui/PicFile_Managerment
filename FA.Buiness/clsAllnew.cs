@@ -184,6 +184,45 @@ namespace FA.Buiness
             finally { if (con.State == ConnectionState.Open) con.Close(); con.Dispose(); }
         }
 
+        public bool InsteraccFile_Server(List<clsAccFileinfo> updateResult)
+        {
+
+
+            //创建连接对象
+            bool isok = false;
+            OleDbConnection con = new OleDbConnection(ConStr);
+
+
+            try
+            {
+                if (con.State == ConnectionState.Closed)
+                    con.Open();
+                //命令
+                foreach (clsAccFileinfo item in updateResult)
+                {
+
+                    string sql = "";
+                    sql = "insert into AccFile(File_name,accfile_id,mark1,mark2,mark3,mark4,mark5) values ('" + item.File_name + "','" + item.accfile_id + "',N'" + item.mark1 + "','" + item.mark2 + "','" + item.mark3 + "','" + item.mark4 + "','" + item.mark5 + "')";
+
+                    OleDbCommand cmd = new OleDbCommand(sql, con);
+                    cmd.ExecuteNonQuery();
+                    isok = true;
+
+                }
+                //con.Close();
+                return isok;
+            }
+            catch (Exception ex)
+            {
+                if (con.State == ConnectionState.Open) con.Close();
+                if (con != null)
+                    con.Dispose();
+                return false;
+
+                throw;
+            }
+            finally { if (con.State == ConnectionState.Open) con.Close(); con.Dispose(); }
+        }
 
     }
 }

@@ -52,4 +52,35 @@ namespace FA.DB
       
 
     }
+    public class clsAccFileinfo
+    {
+        public string T_id { get; set; }
+        public string File_name { get; set; }
+        public string accfile_id { get; set; }
+        public string mark1 { get; set; }
+        public string mark2 { get; set; }
+        public string mark3 { get; set; }
+        public string mark4 { get; set; }
+        public string mark5 { get; set; }
+    }
+    public class clstress_info
+    {
+        public string T_id { get; set; }
+        public string ModelID { get; set; }
+        public string NodeID { get; set; }
+        public string ParentNodeID { get; set; }
+        public string Description { get; set; }
+        public string ForeColor { get; set; }
+        public string BackColor { get; set; }
+        public string ImageIndex { get; set; }
+        public string SelectedImageIndex { get; set; }
+        public string ObjectID { get; set; }
+        public string ObjectTypeID { get; set; }
+        public string NamedRange { get; set; }
+        public string NodeValue { get; set; }
+        public string ActiveID { get; set; }
+        public string LastUpdateTime { get; set; }
+        public string SortOrder { get; set; }
+      
+    }
 }

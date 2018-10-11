@@ -1,4 +1,5 @@
 ﻿using FA.Buiness;
+using FA.Common;
 using FA.DB;
 using System;
 using System.Collections.Generic;
@@ -16,7 +17,7 @@ namespace PicFile_Managerment
     {
 
         public List<clsFile_Managermentinfo> File_Result;
-
+        List<string> filename = new List<string>();
         public frmNewCreate(string ty)
         {
             InitializeComponent();
@@ -45,7 +46,25 @@ namespace PicFile_Managerment
                 iitem.wenjianleibie =textBox7.Text;
                 iitem.yeshu = textBox8.Text;
                 iitem.fenshu =textBox9.Text;
-                iitem.accfile_id =textBox10.Text;
+                string ACCid = clsCommHelp.RandomID();
+
+
+                iitem.accfile_id = ACCid;
+                List<clsAccFileinfo>  accFile_Result = new List<clsAccFileinfo>();
+                for (int i = 0; i < filename.Count; i++)
+                {
+                    clsAccFileinfo temp = new clsAccFileinfo();
+
+                    if (i != 0)
+                        temp.mark1 += "," + filename[i];
+                    else
+                        temp.mark1 += filename[i];
+
+                    temp.accfile_id = ACCid;
+                    accFile_Result.Add(temp);
+
+                }
+
                 iitem.beizhu = textBox11.Text;
 
                 File_Result.Add(iitem);
@@ -54,6 +73,10 @@ namespace PicFile_Managerment
                 clsAllnew BusinessHelp = new clsAllnew();
 
                 BusinessHelp.InsterFile_detail_Server(File_Result);
+                BusinessHelp.InsteraccFile_Server(accFile_Result);
+
+
+
 
                 MessageBox.Show("成功！", "信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -65,6 +88,29 @@ namespace PicFile_Managerment
                 MessageBox.Show("错误！" + ex.Message, "信息", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 throw;
+            }
+        }
+
+       
+        private void 添加ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            filename = new List<string>();
+
+            OpenFileDialog tbox = new OpenFileDialog();
+            tbox.Multiselect = false;
+            tbox.Filter = "所有文件|*.*";
+            tbox.Multiselect = true;
+            tbox.SupportMultiDottedExtensions = true;
+            if (tbox.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                listBox1.Items.Clear();
+
+                foreach (string s in tbox.SafeFileNames)
+                {
+                    filename.Add(tbox.FileName);
+
+                    listBox1.Items.Add(s);
+                }
             }
         }
     }

@@ -266,7 +266,23 @@ namespace FA.Common
 
         #endregion
 
+        public static string RandomID()
+        {
+            Random rd = new Random();
+            string str = "";
+            while (str.Length < 10)
+            {
+                int temp = rd.Next(0, 10);
+                if (!str.Contains(temp + ""))
+                {
+                    str += temp;
+                }
+            }
 
+            return str;
+
+        }
+            
 
     }
 }
