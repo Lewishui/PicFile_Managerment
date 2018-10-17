@@ -5,11 +5,13 @@ using FA.DB;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 //using System.Threading.Tasks;
 using System.Windows.Forms;
 using WeifenLuo.WinFormsUI.Docking;
@@ -29,9 +31,9 @@ namespace PicFile_Managerment
         private bool backGroundRunResult;
         List<clsFile_Managermentinfo> xianjinliuJINGE_Result;
 
-        private SortableBindingList<clszichanfuzaibiaoinfo> sortablezichanfuzaibiaoList;
+        private SortableBindingList<clsFile_Managermentinfo> sortablezichanfuzaibiaoList;
         string strFileName;
-
+        int rowcount = 0;
         string user_or_admin;
 
         delegate void Mydelegate(string name, string id);
@@ -42,6 +44,9 @@ namespace PicFile_Managerment
         private string AppPath = "";
         private ContextMenu tvSample1Menu = new ContextMenu();
         private ContextMenu tvSample2Menu = new ContextMenu();
+        private DataRow tree_Current_row;
+
+        DataTable pDataTable = new DataTable();
 
         //private System.Windows.Forms.Label label1;
         //private System.Windows.Forms.TreeView tvSample;
@@ -61,6 +66,7 @@ namespace PicFile_Managerment
         {
             InitializeComponent();
             user_or_admin = logintype;
+            tree_Current_row = pDataTable.NewRow();
 
         }
 
@@ -163,7 +169,7 @@ namespace PicFile_Managerment
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            var form = new frmNewCreate("");
+            var form = new frmNewCreate("", tree_Current_row);
 
             if (form.ShowDialog() == DialogResult.OK)
             {
@@ -297,7 +303,15 @@ namespace PicFile_Managerment
                     //    this.md = new Mydelegate(OpenForm3);
                     //    break;
                 }
-                md(name, tag);
+                DataRow row = (DataRow)e.Node.Tag;
+                tree_Current_row = pDataTable.NewRow();
+                tree_Current_row = row;
+
+                if (row == null) { return; }
+
+                string saadsd = row["NodeID"].ToString();
+                InitializeDataSource();
+                //   md(name, tag);
             }
         }
         /// <summary>
@@ -337,6 +351,9 @@ namespace PicFile_Managerment
                 AppPath = UI.GetAppPath();
 
                 DBConStr = "Provider=Microsoft.Jet.OLEDB.4.0; Data Source=" + AppPath + "sample.mdb";
+                DBConStr = ConfigurationManager.ConnectionStrings["GODDbContext"].ConnectionString;
+                //"Provider=SQLOLEDB;server=bds28428944.my3w.com,1433;user=bds28428944;password=Lyh079101;database=bds28428944_db"
+                //  string ConStr_sql = @"Provider=SQLOLEDB;server=bds28428944.my3w.com,1433;uid=bds28428944;pwd=Lyh079101;database=bds28428944_db"; //本地自己的数据库
 
                 tvSample1Menu.MenuItems.Add("插入",
                                             new EventHandler(tvSample1RightClickInsert));
@@ -361,7 +378,7 @@ namespace PicFile_Managerment
                 LoadAllTrees();
 
                 tvSample.AllowDrop = true;
-              
+
 
             }
             catch (Exception err) { UI.Hourglass(false); UI.ShowError(err.Message); }
@@ -377,7 +394,7 @@ namespace PicFile_Managerment
             try
             {
                 LoadTree(tvSample, Rules.GetHierarchy(DBConStr, 1));
-              
+
             }
             catch (Exception) { throw; }
         }
@@ -417,14 +434,14 @@ namespace PicFile_Managerment
             try
             {
                 TreeViewUtil.DeleteNode(tvSample, true);
-              
+
             }
             catch (Exception err) { UI.ShowError(err.Message); }
             finally { UI.Hourglass(false); }
         }
         #endregion
 
-     
+
 
         #region tvSample1 Right Click Edit
         private void tvSample1RightClickEdit(object sender, System.EventArgs e)
@@ -442,14 +459,14 @@ namespace PicFile_Managerment
                 node.TreeView.LabelEdit = true;
 
                 node.BeginEdit();
-       
+
             }
             catch (Exception err) { UI.ShowError(err.Message); }
             finally { UI.Hourglass(false); }
         }
         #endregion
 
-     
+
 
         #region tvSample1 Right Click Nudge Up
         private void tvSample1RightClickNudgeUp(object sender, System.EventArgs e)
@@ -460,7 +477,7 @@ namespace PicFile_Managerment
             try
             {
                 TreeViewUtil.NudgeUp(tvSample.SelectedNode);
-               
+
             }
             catch (Exception err) { UI.ShowError(err.Message); }
             finally { UI.Hourglass(false); }
@@ -476,15 +493,15 @@ namespace PicFile_Managerment
             try
             {
                 TreeViewUtil.NudgeDown(tvSample.SelectedNode);
-               
+
             }
             catch (Exception err) { UI.ShowError(err.Message); }
             finally { UI.Hourglass(false); }
         }
         #endregion
 
-       
- 
+
+
 
         #region tvSample1 Right Click Insert
         private void tvSample1RightClickInsert(object sender, System.EventArgs e)
@@ -500,14 +517,14 @@ namespace PicFile_Managerment
                 if (node == null) { return; }
 
                 InsertNewNode(node);
-                
+
             }
             catch (Exception err) { UI.ShowError(err.Message); }
             finally { UI.Hourglass(false); }
         }
         #endregion
 
-       
+
 
         #region Insert New Node
         private void InsertNewNode(TreeNode node)
@@ -590,7 +607,7 @@ namespace PicFile_Managerment
         }
         #endregion
 
-       
+
         #region tvSample Mouse Down
         private void tvSample_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
         {
@@ -675,8 +692,8 @@ namespace PicFile_Managerment
         }
         #endregion
 
-      
-       
+
+
         #region Form Closed
         private void frmMain_Closed(object sender, System.EventArgs e)
         {
@@ -748,15 +765,72 @@ namespace PicFile_Managerment
             }
             catch (Exception err) { UI.ShowError(err.Message); }
         }
-
-     
-
-
-
-
-
         #endregion
 
-    
+        private void InitializeDataSource()
+        {
+            if (tree_Current_row != null)
+            {
+                clsAllnew BusinessHelp = new clsAllnew();
+                xianjinliuJINGE_Result = new List<clsFile_Managermentinfo>();
+
+                string conditions = "";
+                conditions = "select * from File_Managerment where NodeID  like '%" + tree_Current_row["NodeID"].ToString() + "%'";//成功
+                xianjinliuJINGE_Result = BusinessHelp.find_File_Managerment(ref this.bgWorker, conditions);
+
+                sortablezichanfuzaibiaoList = new SortableBindingList<clsFile_Managermentinfo>(xianjinliuJINGE_Result);
+                this.bindingSource1.DataSource = this.sortablezichanfuzaibiaoList;
+                dataGridView.AutoGenerateColumns = false;
+                dataGridView.DataSource = this.bindingSource1;
+            }
+
+
+        }
+
+        private void toolStripDropDownButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 编辑图片ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var oids = GetOrderIdsBySelectedGridCell();
+
+
+            var form = new frmPicEdit(oids[0].ToString());
+
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+
+            }
+
+        }
+        private List<string> GetOrderIdsBySelectedGridCell()
+        {
+
+            List<string> order_ids = new List<string>();
+            var rows = GetSelectedRowsBySelectedCells(dataGridView);
+            foreach (DataGridViewRow row in rows)
+            {
+                var Diningorder = row.DataBoundItem as clsFile_Managermentinfo;
+                order_ids.Add(Diningorder.accfile_id);
+            }
+
+            return order_ids;
+        }
+        private IEnumerable<DataGridViewRow> GetSelectedRowsBySelectedCells(DataGridView dgv)
+        {
+            List<DataGridViewRow> rows = new List<DataGridViewRow>();
+            foreach (DataGridViewCell cell in dgv.SelectedCells)
+            {
+                rows.Add(cell.OwningRow);
+                clsAllnew BusinessHelp = new clsAllnew();
+
+
+            }
+            rowcount = dgv.SelectedCells.Count;
+
+            return rows.Distinct();
+        }
     }
 }

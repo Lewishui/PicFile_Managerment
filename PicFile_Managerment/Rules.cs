@@ -68,8 +68,8 @@ namespace PicFile_Managerment
 
 		        relation = new DataRelation(datarelationname,pk[0],fk,false);
 
-              ds.Tables[0].Constraints.Add(fkcdelete);
-              ds.Relations.Add("ParentChild", ds.Tables[0].Columns["NodeID"], ds.Tables[0].Columns["ParentNodeID"], false);  
+             // ds.Tables[0].Constraints.Add(fkcdelete);
+            //  ds.Relations.Add("ParentChild", ds.Tables[0].Columns["NodeID"], ds.Tables[0].Columns["ParentNodeID"], false);  
 			    ds.Tables[0].AcceptChanges();
 
 			    ds.Relations.Add(relation);  

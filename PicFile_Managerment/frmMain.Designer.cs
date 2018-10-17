@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
@@ -42,9 +42,19 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.body = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.acc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.wenjianbiaohao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.biaoti = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.wenhao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.zhiwendanwei = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.xingwendanwei = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dengjiriqi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.miji = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.wenjianleibie = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.yeshu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fenshu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.accfile_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.beizhu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NodeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.删除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
@@ -58,6 +68,7 @@
             this.分类添加ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.miniToolStrip = new System.Windows.Forms.ToolStrip();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.编辑图片ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -115,6 +126,7 @@
             this.toolStripDropDownButton1.Size = new System.Drawing.Size(45, 21);
             this.toolStripDropDownButton1.Text = "新建";
             this.toolStripDropDownButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripDropDownButton1.Click += new System.EventHandler(this.toolStripDropDownButton1_Click);
             // 
             // toolStripDropDownButton3
             // 
@@ -201,50 +213,124 @@
             // dataGridView
             // 
             this.dataGridView.AllowUserToAddRows = false;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.subject,
-            this.body,
-            this.acc});
+            this.wenjianbiaohao,
+            this.biaoti,
+            this.wenhao,
+            this.zhiwendanwei,
+            this.xingwendanwei,
+            this.dengjiriqi,
+            this.miji,
+            this.wenjianleibie,
+            this.yeshu,
+            this.fenshu,
+            this.accfile_id,
+            this.beizhu,
+            this.NodeID});
             this.dataGridView.ContextMenuStrip = this.contextMenuStrip1;
             this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView.Location = new System.Drawing.Point(3, 3);
             this.dataGridView.Name = "dataGridView";
+            this.dataGridView.RowHeadersVisible = false;
             this.dataGridView.Size = new System.Drawing.Size(780, 340);
             this.dataGridView.TabIndex = 3;
             // 
-            // subject
+            // wenjianbiaohao
             // 
-            this.subject.DataPropertyName = "subject";
-            this.subject.HeaderText = "标题";
-            this.subject.Name = "subject";
+            this.wenjianbiaohao.DataPropertyName = "wenjianbiaohao";
+            this.wenjianbiaohao.HeaderText = "文件编号";
+            this.wenjianbiaohao.Name = "wenjianbiaohao";
             // 
-            // body
+            // biaoti
             // 
-            this.body.DataPropertyName = "body";
-            this.body.HeaderText = "内容";
-            this.body.Name = "body";
+            this.biaoti.DataPropertyName = "biaoti";
+            this.biaoti.HeaderText = "标题";
+            this.biaoti.Name = "biaoti";
             // 
-            // acc
+            // wenhao
             // 
-            this.acc.DataPropertyName = "acc";
-            this.acc.HeaderText = "附件";
-            this.acc.Name = "acc";
+            this.wenhao.DataPropertyName = "wenhao";
+            this.wenhao.HeaderText = "文号";
+            this.wenhao.Name = "wenhao";
+            // 
+            // zhiwendanwei
+            // 
+            this.zhiwendanwei.DataPropertyName = "zhiwendanwei";
+            this.zhiwendanwei.HeaderText = "制文单位";
+            this.zhiwendanwei.Name = "zhiwendanwei";
+            // 
+            // xingwendanwei
+            // 
+            this.xingwendanwei.DataPropertyName = "xingwendanwei";
+            this.xingwendanwei.HeaderText = "行文单位";
+            this.xingwendanwei.Name = "xingwendanwei";
+            // 
+            // dengjiriqi
+            // 
+            this.dengjiriqi.DataPropertyName = "dengjiriqi";
+            this.dengjiriqi.HeaderText = "登记日期";
+            this.dengjiriqi.Name = "dengjiriqi";
+            // 
+            // miji
+            // 
+            this.miji.DataPropertyName = "miji";
+            this.miji.HeaderText = "密级";
+            this.miji.Name = "miji";
+            // 
+            // wenjianleibie
+            // 
+            this.wenjianleibie.DataPropertyName = "wenjianleibie";
+            this.wenjianleibie.HeaderText = "文件类别";
+            this.wenjianleibie.Name = "wenjianleibie";
+            // 
+            // yeshu
+            // 
+            this.yeshu.DataPropertyName = "yeshu";
+            this.yeshu.HeaderText = "页数";
+            this.yeshu.Name = "yeshu";
+            // 
+            // fenshu
+            // 
+            this.fenshu.DataPropertyName = "fenshu";
+            this.fenshu.HeaderText = "分数";
+            this.fenshu.Name = "fenshu";
+            // 
+            // accfile_id
+            // 
+            this.accfile_id.DataPropertyName = "accfile_id";
+            this.accfile_id.HeaderText = "附件ID";
+            this.accfile_id.Name = "accfile_id";
+            this.accfile_id.Visible = false;
+            // 
+            // beizhu
+            // 
+            this.beizhu.DataPropertyName = "beizhu";
+            this.beizhu.HeaderText = "备注";
+            this.beizhu.Name = "beizhu";
+            // 
+            // NodeID
+            // 
+            this.NodeID.DataPropertyName = "NodeID";
+            this.NodeID.HeaderText = "NodeID";
+            this.NodeID.Name = "NodeID";
+            this.NodeID.Visible = false;
             // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.删除ToolStripMenuItem});
+            this.删除ToolStripMenuItem,
+            this.编辑图片ToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(101, 26);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 70);
             // 
             // 删除ToolStripMenuItem
             // 
             this.删除ToolStripMenuItem.Name = "删除ToolStripMenuItem";
-            this.删除ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.删除ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.删除ToolStripMenuItem.Text = "删除";
             // 
             // toolStrip2
@@ -277,6 +363,7 @@
             this.tvSample.TabIndex = 6;
             this.tvSample.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.tvSample_AfterLabelEdit);
             this.tvSample.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.tvSample_ItemDrag);
+            this.tvSample.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             this.tvSample.DragDrop += new System.Windows.Forms.DragEventHandler(this.tvSample_DragDrop);
             this.tvSample.DragEnter += new System.Windows.Forms.DragEventHandler(this.tvSample_DragEnter);
             this.tvSample.DragOver += new System.Windows.Forms.DragEventHandler(this.tvSample_DragOver);
@@ -334,6 +421,13 @@
             this.miniToolStrip.Size = new System.Drawing.Size(800, 25);
             this.miniToolStrip.TabIndex = 6;
             // 
+            // 编辑图片ToolStripMenuItem
+            // 
+            this.编辑图片ToolStripMenuItem.Name = "编辑图片ToolStripMenuItem";
+            this.编辑图片ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.编辑图片ToolStripMenuItem.Text = "编辑图片";
+            this.编辑图片ToolStripMenuItem.Click += new System.EventHandler(this.编辑图片ToolStripMenuItem_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -384,9 +478,6 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.DataGridView dataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn subject;
-        private System.Windows.Forms.DataGridViewTextBoxColumn body;
-        private System.Windows.Forms.DataGridViewTextBoxColumn acc;
         private System.Windows.Forms.ToolStrip toolStrip2;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripProgressBar pbStatus;
@@ -395,6 +486,20 @@
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripMenuItem 分类添加ToolStripMenuItem;
         private System.Windows.Forms.TreeView tvSample;
+        private System.Windows.Forms.DataGridViewTextBoxColumn wenjianbiaohao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn biaoti;
+        private System.Windows.Forms.DataGridViewTextBoxColumn wenhao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn zhiwendanwei;
+        private System.Windows.Forms.DataGridViewTextBoxColumn xingwendanwei;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dengjiriqi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn miji;
+        private System.Windows.Forms.DataGridViewTextBoxColumn wenjianleibie;
+        private System.Windows.Forms.DataGridViewTextBoxColumn yeshu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fenshu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn accfile_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn beizhu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NodeID;
+        private System.Windows.Forms.ToolStripMenuItem 编辑图片ToolStripMenuItem;
 
     }
 }

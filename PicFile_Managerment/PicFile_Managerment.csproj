@@ -23,6 +23,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -38,6 +39,9 @@
     <ApplicationIcon>ico.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ImageClassLib">
+      <HintPath>..\Reference\ImageClassLib.dll</HintPath>
+    </Reference>
     <Reference Include="IrisSkin2">
       <HintPath>..\Reference\IrisSkin2.dll</HintPath>
     </Reference>
@@ -50,7 +54,11 @@
       <HintPath>..\Reference\Microsoft.Office.Interop.Excel.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.IO.Log" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -59,11 +67,15 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="ThoughtWorks.QRCode">
+      <HintPath>..\Reference\ThoughtWorks.QRCode.dll</HintPath>
+    </Reference>
     <Reference Include="WeifenLuo.WinFormsUI.Docking">
       <HintPath>..\Reference\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnimatedGifEncoder.cs" />
     <Compile Include="DataAccess.cs" />
     <Compile Include="DesktopUI.cs" />
     <Compile Include="frmAboutBox.cs">
@@ -96,10 +108,44 @@
     <Compile Include="frmNewCreate.Designer.cs">
       <DependentUpon>frmNewCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPicAdjust.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPicAdjust.Designer.cs">
+      <DependentUpon>frmPicAdjust.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPicEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPicEdit.Designer.cs">
+      <DependentUpon>frmPicEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSlide.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSlide.Designer.cs">
+      <DependentUpon>frmSlide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSpecialEfficacy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSpecialEfficacy.Designer.cs">
+      <DependentUpon>frmSpecialEfficacy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWater.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWater.Designer.cs">
+      <DependentUpon>frmWater.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GifDecoder.cs" />
+    <Compile Include="LZWEncoder.cs" />
+    <Compile Include="NeuQuant.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rules.cs" />
     <Compile Include="SortableBindingList.cs" />
+    <Compile Include="transparent.cs" />
     <Compile Include="TreeViewUtil.cs" />
     <EmbeddedResource Include="frmAboutBox.resx">
       <DependentUpon>frmAboutBox.cs</DependentUpon>
@@ -115,6 +161,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNewCreate.resx">
       <DependentUpon>frmNewCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPicAdjust.resx">
+      <DependentUpon>frmPicAdjust.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPicEdit.resx">
+      <DependentUpon>frmPicEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSlide.resx">
+      <DependentUpon>frmSlide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSpecialEfficacy.resx">
+      <DependentUpon>frmSpecialEfficacy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWater.resx">
+      <DependentUpon>frmWater.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

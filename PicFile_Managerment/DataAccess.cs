@@ -88,12 +88,12 @@ namespace PicFile_Managerment
 
             try
             {
-                string ConStr_sql = @"Provider=SQLOLEDB;server=bds28428944.my3w.com,1433;uid=bds28428944;pwd=Lyh079101;database=bds28428944_db"; //本地自己的数据库
+              //  string ConStr_sql = @"Provider=SQLOLEDB;server=bds28428944.my3w.com,1433;uid=bds28428944;pwd=Lyh079101;database=bds28428944_db"; //本地自己的数据库
 
                 using (OleDbConnection conn = new OleDbConnection())
                 {
 
-                    conn.ConnectionString = ConStr_sql;
+                    conn.ConnectionString = connectionString;
                     conn.Open();
 
                     using (OleDbDataAdapter da = new OleDbDataAdapter(sql, conn))

@@ -49,7 +49,8 @@ namespace FA.DB
         public string accfile_id { get; set; }
 
         public string beizhu { get; set; }
-      
+        public string NodeID { get; set; }
+     
 
     }
     public class clsAccFileinfo

@@ -5,6 +5,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.OleDb;
 using System.IO;
@@ -30,7 +31,8 @@ namespace FA.Buiness
         public clsAllnew()
         {
             //  ServerID();
-            ConStr = SQLHelper.ConStr_sql;
+            //ConStr = SQLHelper.ConStr_sql;
+            ConStr = ConfigurationManager.ConnectionStrings["GODDbContext"].ConnectionString;
 
 
         }
@@ -41,8 +43,6 @@ namespace FA.Buiness
 
             string path = AppDomain.CurrentDomain.BaseDirectory + "Resources";
             List<string> Alist = GetBy_CategoryReportFileName(path);
-
-
 
             for (int i = 0; i < Alist.Count; i++)
             {
@@ -76,10 +76,8 @@ namespace FA.Buiness
 
             return FileNameList;
         }
-       
 
-
-         public void DownLoadPDF(ref BackgroundWorker bgWorker, string pathname)
+        public void DownLoadPDF(ref BackgroundWorker bgWorker, string pathname)
         {
             bgWorker1 = bgWorker;
 
@@ -146,8 +144,8 @@ namespace FA.Buiness
 
         public bool InsterFile_detail_Server(List<clsFile_Managermentinfo> updateResult)
         {
-        
-        
+
+
             //创建连接对象
             bool isok = false;
             OleDbConnection con = new OleDbConnection(ConStr);
@@ -160,9 +158,9 @@ namespace FA.Buiness
                 //命令
                 foreach (clsFile_Managermentinfo item in updateResult)
                 {
-               
+
                     string sql = "";
-                    sql = "insert into File_Managerment(wenjianbiaohao,biaoti,wenhao,zhiwendanwei,xingwendanwei,dengjiriqi,miji,wenjianleibie,yeshu,fenshu,accfile_id,beizhu) values ('" + item.wenjianbiaohao + "','" + item.biaoti + "',N'" + item.wenhao + "','" + item.zhiwendanwei + "','" + item.xingwendanwei + "','" + item.dengjiriqi + "','" + item.miji + "','" + item.wenjianleibie + "',N'" + item.yeshu + "',N'" + item.fenshu + "',N'" + item.accfile_id + "',N'" + item.beizhu + "')";
+                    sql = "insert into File_Managerment(wenjianbiaohao,biaoti,wenhao,zhiwendanwei,xingwendanwei,dengjiriqi,miji,wenjianleibie,yeshu,fenshu,accfile_id,beizhu,NodeID) values ('" + item.wenjianbiaohao + "','" + item.biaoti + "',N'" + item.wenhao + "','" + item.zhiwendanwei + "','" + item.xingwendanwei + "','" + item.dengjiriqi + "','" + item.miji + "','" + item.wenjianleibie + "',N'" + item.yeshu + "',N'" + item.fenshu + "',N'" + item.accfile_id + "',N'" + item.beizhu + "',N'" + item.NodeID + "')";
 
                     OleDbCommand cmd = new OleDbCommand(sql, con);
                     cmd.ExecuteNonQuery();
@@ -222,6 +220,139 @@ namespace FA.Buiness
                 throw;
             }
             finally { if (con.State == ConnectionState.Open) con.Close(); con.Dispose(); }
+        }
+
+        public List<clsFile_Managermentinfo> find_File_Managerment(ref BackgroundWorker bgWorker, string text)
+        {
+
+            bgWorker1 = bgWorker;
+
+            OleDbConnection aConnection = new OleDbConnection(ConStr);
+            try
+            {
+                List<clsFile_Managermentinfo> dailyResult = new List<clsFile_Managermentinfo>();
+                if (aConnection.State == ConnectionState.Closed)
+                    aConnection.Open();
+
+                OleDbDataAdapter myDataAdapter = new OleDbDataAdapter(text, aConnection);
+                OleDbCommandBuilder mybuilder = new OleDbCommandBuilder(myDataAdapter);
+                DataSet ds = new DataSet();
+                myDataAdapter.Fill(ds, "File_Managerment");
+                foreach (DataRow emp in ds.Tables["File_Managerment"].Rows)
+                {
+                    clsFile_Managermentinfo tempnote = new clsFile_Managermentinfo(); //定义返回值
+
+                    if (emp["T_id"].ToString() != "")
+                        tempnote.T_id = emp["T_id"].ToString();
+                    if (emp["wenjianbiaohao"].ToString() != "")
+                        tempnote.wenjianbiaohao = emp["wenjianbiaohao"].ToString();
+                    if (emp["biaoti"].ToString() != "")
+                        tempnote.biaoti = emp["biaoti"].ToString();
+                    if (emp["wenhao"].ToString() != "")
+                        tempnote.wenhao = emp["wenhao"].ToString();
+                    if (emp["zhiwendanwei"].ToString() != "")
+                        tempnote.zhiwendanwei = emp["zhiwendanwei"].ToString();
+                    if (emp["xingwendanwei"].ToString() != "")
+                        tempnote.xingwendanwei = emp["xingwendanwei"].ToString();
+                    if (emp["dengjiriqi"].ToString() != "")
+                        tempnote.dengjiriqi = emp["dengjiriqi"].ToString();
+                    if (emp["miji"].ToString() != "")
+                        tempnote.miji = emp["miji"].ToString();
+                    if (emp["wenjianleibie"].ToString() != "")
+                        tempnote.wenjianleibie = emp["wenjianleibie"].ToString();
+                    if (emp["yeshu"].ToString() != "")
+                        tempnote.yeshu = emp["yeshu"].ToString();
+                    if (emp["fenshu"].ToString() != "")
+                        tempnote.fenshu = emp["fenshu"].ToString();
+                    if (emp["accfile_id"].ToString() != "")
+                        tempnote.accfile_id = emp["accfile_id"].ToString();
+                    if (emp["beizhu"].ToString() != "")
+                        tempnote.beizhu = emp["beizhu"].ToString();
+                    if (emp["NodeID"].ToString() != "")
+                        tempnote.NodeID = emp["NodeID"].ToString();
+                   
+                    dailyResult.Add(tempnote);
+
+                }
+
+
+
+                return dailyResult;
+
+
+            }
+            catch (Exception ex)
+            {
+                if (aConnection.State == ConnectionState.Open) aConnection.Close(); aConnection.Dispose();
+              //  bgWorker1.ReportProgress(0, "读取失败 ，请刷新后重新读取！");
+
+                return null;
+
+                throw ex;
+            }
+            finally { if (aConnection.State == ConnectionState.Open) aConnection.Close(); aConnection.Dispose(); }
+
+        }
+
+
+        public List<clsAccFileinfo> find_ACCFile(string text)
+        {
+
+            
+            OleDbConnection aConnection = new OleDbConnection(ConStr);
+            try
+            {
+                List<clsAccFileinfo> dailyResult = new List<clsAccFileinfo>();
+                if (aConnection.State == ConnectionState.Closed)
+                    aConnection.Open();
+
+                OleDbDataAdapter myDataAdapter = new OleDbDataAdapter(text, aConnection);
+                OleDbCommandBuilder mybuilder = new OleDbCommandBuilder(myDataAdapter);
+                DataSet ds = new DataSet();
+                myDataAdapter.Fill(ds, "AccFile");
+                foreach (DataRow emp in ds.Tables["AccFile"].Rows)
+                {
+                    clsAccFileinfo tempnote = new clsAccFileinfo(); //定义返回值
+
+                    if (emp["T_id"].ToString() != "")
+                        tempnote.T_id = emp["T_id"].ToString();
+                    if (emp["File_name"].ToString() != "")
+                        tempnote.File_name = emp["File_name"].ToString();
+                    if (emp["accfile_id"].ToString() != "")
+                        tempnote.accfile_id = emp["accfile_id"].ToString();
+                    if (emp["mark1"].ToString() != "")
+                        tempnote.mark1 = emp["mark1"].ToString();
+                    if (emp["mark2"].ToString() != "")
+                        tempnote.mark2 = emp["mark2"].ToString();
+                    if (emp["mark3"].ToString() != "")
+                        tempnote.mark3 = emp["mark3"].ToString();
+                    if (emp["mark4"].ToString() != "")
+                        tempnote.mark4 = emp["mark4"].ToString();
+                    if (emp["mark5"].ToString() != "")
+                        tempnote.mark5 = emp["mark5"].ToString();
+               
+
+                    dailyResult.Add(tempnote);
+
+                }
+
+
+
+                return dailyResult;
+
+
+            }
+            catch (Exception ex)
+            {
+                if (aConnection.State == ConnectionState.Open) aConnection.Close(); aConnection.Dispose();
+                //  bgWorker1.ReportProgress(0, "读取失败 ，请刷新后重新读取！");
+
+                return null;
+
+                throw ex;
+            }
+            finally { if (aConnection.State == ConnectionState.Open) aConnection.Close(); aConnection.Dispose(); }
+
         }
 
     }

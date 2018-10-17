@@ -18,9 +18,17 @@ namespace PicFile_Managerment
 
         public List<clsFile_Managermentinfo> File_Result;
         List<string> filename = new List<string>();
-        public frmNewCreate(string ty)
+
+        DataRow tree_Current_row;
+
+        public frmNewCreate(string ty, DataRow tree_Current_row1)
         {
             InitializeComponent();
+            tree_Current_row = tree_Current_row1;
+
+            textBox7.Text = tree_Current_row["Description"].ToString();
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -42,15 +50,17 @@ namespace PicFile_Managerment
                 iitem.zhiwendanwei = textBox3.Text;
                 iitem.xingwendanwei = textBox4.Text;
                 iitem.dengjiriqi = this.dateTimePicker1.Value.AddDays(0).Date.ToString("MM/dd/yyyy"); ;
-                iitem.miji =textBox6.Text;
-                iitem.wenjianleibie =textBox7.Text;
+                iitem.miji = textBox6.Text;
+                iitem.wenjianleibie = textBox7.Text;
+                iitem.NodeID = tree_Current_row["NodeID"].ToString();
+
                 iitem.yeshu = textBox8.Text;
-                iitem.fenshu =textBox9.Text;
+                iitem.fenshu = textBox9.Text;
                 string ACCid = clsCommHelp.RandomID();
 
 
                 iitem.accfile_id = ACCid;
-                List<clsAccFileinfo>  accFile_Result = new List<clsAccFileinfo>();
+                List<clsAccFileinfo> accFile_Result = new List<clsAccFileinfo>();
                 for (int i = 0; i < filename.Count; i++)
                 {
                     clsAccFileinfo temp = new clsAccFileinfo();
@@ -91,7 +101,7 @@ namespace PicFile_Managerment
             }
         }
 
-       
+
         private void 添加ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             filename = new List<string>();
