@@ -1,5 +1,7 @@
-﻿using System;
+﻿using FA.DB;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -282,7 +284,45 @@ namespace FA.Common
             return str;
 
         }
-            
+
+        #region pic
+        public static string LocationImagePath(clsAccFileinfo location)
+        {
+
+            string basePath = LocationImageBasePath();
+            string folderPath = Path.Combine(basePath, (Convert.ToInt64(location.accfile_id) / 1000 * 1000).ToString());
+
+            CreateFolder(folderPath);
+
+            string fullPath = Path.Combine(folderPath, location.File_name);
+
+            return fullPath;
+        }
+        private static void CreateFolder(string path)
+        {
+            if (!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
+        }
+        public static string LocationImageBasePath()
+        {
+            int type = 1;
+
+            string path = Path.Combine(ImageBasePath, "location_" + type.ToString().ToLower());
+            CreateFolder(path);
+            return path;
+        }
+        public static string ImageBasePath
+        {
+            get
+            {
+                string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "data", "images");
+                CreateFolder(path);
+                return path + Path.DirectorySeparatorChar.ToString();
+            }
+        }
+        #endregion
 
     }
 }

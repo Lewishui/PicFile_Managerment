@@ -149,8 +149,6 @@ namespace FA.Buiness
             //创建连接对象
             bool isok = false;
             OleDbConnection con = new OleDbConnection(ConStr);
-
-
             try
             {
                 if (con.State == ConnectionState.Closed)
@@ -181,7 +179,99 @@ namespace FA.Buiness
             }
             finally { if (con.State == ConnectionState.Open) con.Close(); con.Dispose(); }
         }
+        public bool Update_File_detail_Server(List<clsFile_Managermentinfo> updateResult)
+        {
 
+
+            //创建连接对象
+            bool isok = false;
+            OleDbConnection con = new OleDbConnection(ConStr);
+            try
+            {
+                if (con.State == ConnectionState.Closed)
+                    con.Open();
+                //命令
+                foreach (clsFile_Managermentinfo item in updateResult)
+                {
+
+                    string sql = "";
+                    string conditions = "";
+                    if (item.wenjianbiaohao != null)
+                    {
+                        conditions += " wenjianbiaohao ='" + item.wenjianbiaohao + "'";
+                    }
+                    if (item.biaoti != null)
+                    {
+                        conditions += " ,biaoti ='" + item.biaoti + "'";
+                    }
+                    if (item.wenhao != null)
+                    {
+                        conditions += " ,wenhao ='" + item.wenhao + "'";
+                    }
+                    if (item.zhiwendanwei != null)
+                    {
+                        conditions += " ,zhiwendanwei ='" + item.zhiwendanwei + "'";
+                    }
+                    if (item.xingwendanwei != null)
+                    {
+                        conditions += " ,xingwendanwei ='" + item.xingwendanwei + "'";
+                    }
+                    if (item.dengjiriqi != null)
+                    {
+                        conditions += " ,dengjiriqi ='" + item.dengjiriqi + "'";
+                    }
+                    if (item.miji != null)
+                    {
+                        conditions += " ,miji ='" + item.miji + "'";
+                    }
+                    if (item.wenjianleibie != null)
+                    {
+                        conditions += " ,wenjianleibie ='" + item.wenjianleibie + "'";
+                    }
+                    if (item.yeshu != null)
+                    {
+                        conditions += " ,yeshu ='" + item.yeshu + "'";
+                    }
+                    if (item.fenshu != null)
+                    {
+                        conditions += " ,fenshu ='" + item.fenshu + "'";
+                    }
+                    if (item.accfile_id != null)
+                    {
+                        conditions += " ,accfile_id ='" + item.accfile_id + "'";
+                    }
+                    if (item.beizhu != null)
+                    {
+                        conditions += " ,beizhu ='" + item.beizhu + "'";
+                    }
+                    if (item.NodeID != null)
+                    {
+                        conditions += " ,NodeID ='" + item.NodeID + "'";
+                    }
+                    conditions = "update File_Managerment set  " + conditions + " where T_id = " + item.T_id + " ";
+                    sql = conditions;
+
+                    //sql = "update File_Managerment t set (t.wenjianbiaohao,t.biaoti,t.wenhao,t.zhiwendanwei,t.xingwendanwei,t.dengjiriqi,miji,t.wenjianleibie,t.yeshu,t.fenshu,t.accfile_id,t.beizhu,t.NodeID) values ('" + item.wenjianbiaohao + "','" + item.biaoti + "',N'" + item.wenhao + "','" + item.zhiwendanwei + "','" + item.xingwendanwei + "','" + item.dengjiriqi + "','" + item.miji + "','" + item.wenjianleibie + "',N'" + item.yeshu + "',N'" + item.fenshu + "',N'" + item.accfile_id + "',N'" + item.beizhu + "',N'" + item.NodeID + "') where T_id='" + item.T_id + "'";
+
+                    OleDbCommand cmd = new OleDbCommand(sql, con);
+                    cmd.ExecuteNonQuery();
+                    isok = true;
+
+                }
+                //con.Close();
+                return isok;
+            }
+            catch (Exception ex)
+            {
+                if (con.State == ConnectionState.Open) con.Close();
+                if (con != null)
+                    con.Dispose();
+                return false;
+
+                throw;
+            }
+            finally { if (con.State == ConnectionState.Open) con.Close(); con.Dispose(); }
+        }
         public bool InsteraccFile_Server(List<clsAccFileinfo> updateResult)
         {
 
@@ -201,6 +291,80 @@ namespace FA.Buiness
 
                     string sql = "";
                     sql = "insert into AccFile(File_name,accfile_id,mark1,mark2,mark3,mark4,mark5) values ('" + item.File_name + "','" + item.accfile_id + "',N'" + item.mark1 + "','" + item.mark2 + "','" + item.mark3 + "','" + item.mark4 + "','" + item.mark5 + "')";
+
+                    OleDbCommand cmd = new OleDbCommand(sql, con);
+                    cmd.ExecuteNonQuery();
+                    isok = true;
+
+                }
+                //con.Close();
+                return isok;
+            }
+            catch (Exception ex)
+            {
+                if (con.State == ConnectionState.Open) con.Close();
+                if (con != null)
+                    con.Dispose();
+                return false;
+
+                throw;
+            }
+            finally { if (con.State == ConnectionState.Open) con.Close(); con.Dispose(); }
+        }
+        public bool Update_accFile_Server(List<clsAccFileinfo> updateResult)
+        {
+
+
+            //创建连接对象
+            bool isok = false;
+            OleDbConnection con = new OleDbConnection(ConStr);
+
+
+            try
+            {
+                if (con.State == ConnectionState.Closed)
+                    con.Open();
+                //命令
+                foreach (clsAccFileinfo item in updateResult)
+                {
+
+                    string conditions = "";
+                    if (item.File_name != null)
+                    {
+                        conditions += " File_name ='" + item.File_name + "'";
+                    }
+                    if (item.accfile_id != null)
+                    {
+                        conditions += " ,accfile_id ='" + item.accfile_id + "'";
+                    }
+                    if (item.mark1 != null)
+                    {
+                        conditions += " ,mark1 ='" + item.mark1 + "'";
+                    }
+                    if (item.mark2 != null)
+                    {
+                        conditions += " ,mark2 ='" + item.mark2 + "'";
+                    }
+                    if (item.mark3 != null)
+                    {
+                        conditions += " ,mark3 ='" + item.mark3 + "'";
+                    }
+                    if (item.mark4 != null)
+                    {
+                        conditions += " ,mark4 ='" + item.mark4 + "'";
+                    }
+                    if (item.mark5 != null)
+                    {
+                        conditions += " ,mark5 ='" + item.mark5 + "'";
+                    }
+
+                    conditions = "update AccFile set  " + conditions + " where T_id = " + item.T_id + " ";
+                  
+
+
+                    string sql = "";
+                    sql = conditions;
+                    //sql = "update  AccFile set (File_name,accfile_id,mark1,mark2,mark3,mark4,mark5) values ('" + item.File_name + "','" + item.accfile_id + "',N'" + item.mark1 + "','" + item.mark2 + "','" + item.mark3 + "','" + item.mark4 + "','" + item.mark5 + "')";
 
                     OleDbCommand cmd = new OleDbCommand(sql, con);
                     cmd.ExecuteNonQuery();
@@ -270,7 +434,7 @@ namespace FA.Buiness
                         tempnote.beizhu = emp["beizhu"].ToString();
                     if (emp["NodeID"].ToString() != "")
                         tempnote.NodeID = emp["NodeID"].ToString();
-                   
+
                     dailyResult.Add(tempnote);
 
                 }
@@ -284,7 +448,7 @@ namespace FA.Buiness
             catch (Exception ex)
             {
                 if (aConnection.State == ConnectionState.Open) aConnection.Close(); aConnection.Dispose();
-              //  bgWorker1.ReportProgress(0, "读取失败 ，请刷新后重新读取！");
+                //  bgWorker1.ReportProgress(0, "读取失败 ，请刷新后重新读取！");
 
                 return null;
 
@@ -298,7 +462,7 @@ namespace FA.Buiness
         public List<clsAccFileinfo> find_ACCFile(string text)
         {
 
-            
+
             OleDbConnection aConnection = new OleDbConnection(ConStr);
             try
             {
@@ -330,7 +494,7 @@ namespace FA.Buiness
                         tempnote.mark4 = emp["mark4"].ToString();
                     if (emp["mark5"].ToString() != "")
                         tempnote.mark5 = emp["mark5"].ToString();
-               
+
 
                     dailyResult.Add(tempnote);
 
@@ -355,5 +519,58 @@ namespace FA.Buiness
 
         }
 
+
+        public bool deleteFile_Managerment(string name)
+        {
+            OleDbConnection con = new OleDbConnection(ConStr);
+            try
+            {
+                if (con.State == ConnectionState.Closed)
+                    con.Open();
+                string sql2 = "delete from File_Managerment where   T_id='" + name + "'";
+
+                OleDbCommand cmd = new OleDbCommand(sql2, con);
+                cmd.ExecuteNonQuery();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                if (con.State == ConnectionState.Open) con.Close();
+                if (con != null)
+                    con.Dispose();
+                return false;
+
+                throw;
+            }
+            finally { if (con.State == ConnectionState.Open) con.Close(); con.Dispose(); }
+
+        }
+        public bool deleteaccFil (string name)
+        {
+            OleDbConnection con = new OleDbConnection(ConStr);
+            try
+            {
+                if (con.State == ConnectionState.Closed)
+                    con.Open();
+                string sql2 = "delete from AccFile where   accfile_id='" + name + "'";
+
+                OleDbCommand cmd = new OleDbCommand(sql2, con);
+                cmd.ExecuteNonQuery();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                if (con.State == ConnectionState.Open) con.Close();
+                if (con != null)
+                    con.Dispose();
+                return false;
+
+                throw;
+            }
+            finally { if (con.State == ConnectionState.Open) con.Close(); con.Dispose(); }
+
+        }
     }
 }

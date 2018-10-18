@@ -55,6 +55,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLHelper.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FA.DB\FA.DB.csproj">
+      <Project>{ed233de7-6011-4434-8d3f-acd7bdeb9f27}</Project>
+      <Name>FA.DB</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

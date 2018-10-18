@@ -120,7 +120,7 @@ namespace PicFile_Managerment
 
                     imageListSmall.Images.Add(Image.FromFile(item.mark1));
 
-                    imageListSmall.ImageSize = new Size(32, 32);// new Point(32, 32);
+                    imageListSmall.ImageSize = new Size(64, 64);// new Point(32, 32);
                 }
                 listView1.View = View.LargeIcon;
                 listView1.LargeImageList = imageListSmall;
@@ -133,7 +133,8 @@ namespace PicFile_Managerment
                 }
             }
             #endregion
-            ShowImage(dailyResult[0].mark1);
+            if (dailyResult.Count > 0)
+                ShowImage(dailyResult[0].mark1);
             //  CreateMyListView();
         }
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -165,10 +166,12 @@ namespace PicFile_Managerment
             }
         }
 
-        private void ShowImage(string fullname)
+        private void ShowImage(string fullname1)
         {
             try
             {
+                fullname = fullname1;
+
                 FPath = fullname;
 
                 myBmp = new Bitmap(fullname);
@@ -1339,8 +1342,11 @@ PixelFormat.Format8bppIndexed
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int ddd = listView1.SelectedIndices[0];
-            ShowImage(dailyResult[this.listView1.SelectedItems[0].Index].mark1);
+            if (listView1.SelectedItems.Count > 0)
+            {
+                int ddd = listView1.SelectedIndices[0];
+                ShowImage(dailyResult[this.listView1.SelectedItems[0].Index].mark1);
+            }
         }
 
         private void CreateMyListView()

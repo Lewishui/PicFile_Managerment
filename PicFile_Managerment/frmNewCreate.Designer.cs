@@ -34,6 +34,10 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.添加ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.删除所选ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -61,15 +65,11 @@
             this.txname = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.添加ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.删除所选ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -138,6 +138,39 @@
             this.tabPage1.Size = new System.Drawing.Size(391, 244);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "附属信息";
+            // 
+            // listBox1
+            // 
+            this.listBox1.ContextMenuStrip = this.contextMenuStrip1;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 12;
+            this.listBox1.Location = new System.Drawing.Point(37, 26);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(343, 64);
+            this.listBox1.TabIndex = 174;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.添加ToolStripMenuItem,
+            this.删除所选ToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(125, 48);
+            // 
+            // 添加ToolStripMenuItem
+            // 
+            this.添加ToolStripMenuItem.Name = "添加ToolStripMenuItem";
+            this.添加ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.添加ToolStripMenuItem.Text = "添加文件";
+            this.添加ToolStripMenuItem.Click += new System.EventHandler(this.添加ToolStripMenuItem_Click);
+            // 
+            // 删除所选ToolStripMenuItem
+            // 
+            this.删除所选ToolStripMenuItem.Name = "删除所选ToolStripMenuItem";
+            this.删除所选ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.删除所选ToolStripMenuItem.Text = "删除所选";
+            this.删除所选ToolStripMenuItem.Click += new System.EventHandler(this.删除所选ToolStripMenuItem_Click);
             // 
             // textBox11
             // 
@@ -389,37 +422,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.添加ToolStripMenuItem,
-            this.删除所选ToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 70);
-            // 
-            // 添加ToolStripMenuItem
-            // 
-            this.添加ToolStripMenuItem.Name = "添加ToolStripMenuItem";
-            this.添加ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.添加ToolStripMenuItem.Text = "添加文件";
-            this.添加ToolStripMenuItem.Click += new System.EventHandler(this.添加ToolStripMenuItem_Click);
-            // 
-            // 删除所选ToolStripMenuItem
-            // 
-            this.删除所选ToolStripMenuItem.Name = "删除所选ToolStripMenuItem";
-            this.删除所选ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.删除所选ToolStripMenuItem.Text = "删除所选";
-            // 
-            // listBox1
-            // 
-            this.listBox1.ContextMenuStrip = this.contextMenuStrip1;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 12;
-            this.listBox1.Location = new System.Drawing.Point(37, 26);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(343, 64);
-            this.listBox1.TabIndex = 174;
-            // 
             // frmNewCreate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -435,8 +437,8 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

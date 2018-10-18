@@ -84,4 +84,11 @@ namespace FA.DB
         public string SortOrder { get; set; }
       
     }
+
+    public partial class ComboLocation
+    {
+
+        public int id { get; set; }
+        public string img { get; set; }
+    }
 }

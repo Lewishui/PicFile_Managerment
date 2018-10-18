@@ -57,6 +57,8 @@
             this.NodeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.删除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.编辑图片ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.编辑属性ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.pbStatus = new System.Windows.Forms.ToolStripProgressBar();
@@ -68,7 +70,6 @@
             this.分类添加ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.miniToolStrip = new System.Windows.Forms.ToolStrip();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.编辑图片ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -238,6 +239,8 @@
             this.dataGridView.RowHeadersVisible = false;
             this.dataGridView.Size = new System.Drawing.Size(780, 340);
             this.dataGridView.TabIndex = 3;
+            this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
+            this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick);
             // 
             // wenjianbiaohao
             // 
@@ -323,15 +326,31 @@
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.删除ToolStripMenuItem,
-            this.编辑图片ToolStripMenuItem});
+            this.编辑图片ToolStripMenuItem,
+            this.编辑属性ToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(125, 70);
             // 
             // 删除ToolStripMenuItem
             // 
             this.删除ToolStripMenuItem.Name = "删除ToolStripMenuItem";
-            this.删除ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.删除ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.删除ToolStripMenuItem.Text = "删除";
+            this.删除ToolStripMenuItem.Click += new System.EventHandler(this.删除ToolStripMenuItem_Click);
+            // 
+            // 编辑图片ToolStripMenuItem
+            // 
+            this.编辑图片ToolStripMenuItem.Name = "编辑图片ToolStripMenuItem";
+            this.编辑图片ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.编辑图片ToolStripMenuItem.Text = "编辑图片";
+            this.编辑图片ToolStripMenuItem.Click += new System.EventHandler(this.编辑图片ToolStripMenuItem_Click);
+            // 
+            // 编辑属性ToolStripMenuItem
+            // 
+            this.编辑属性ToolStripMenuItem.Name = "编辑属性ToolStripMenuItem";
+            this.编辑属性ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.编辑属性ToolStripMenuItem.Text = "编辑属性";
+            this.编辑属性ToolStripMenuItem.Click += new System.EventHandler(this.编辑属性ToolStripMenuItem_Click);
             // 
             // toolStrip2
             // 
@@ -421,13 +440,6 @@
             this.miniToolStrip.Size = new System.Drawing.Size(800, 25);
             this.miniToolStrip.TabIndex = 6;
             // 
-            // 编辑图片ToolStripMenuItem
-            // 
-            this.编辑图片ToolStripMenuItem.Name = "编辑图片ToolStripMenuItem";
-            this.编辑图片ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.编辑图片ToolStripMenuItem.Text = "编辑图片";
-            this.编辑图片ToolStripMenuItem.Click += new System.EventHandler(this.编辑图片ToolStripMenuItem_Click);
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -500,6 +512,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn beizhu;
         private System.Windows.Forms.DataGridViewTextBoxColumn NodeID;
         private System.Windows.Forms.ToolStripMenuItem 编辑图片ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 编辑属性ToolStripMenuItem;
 
     }
 }

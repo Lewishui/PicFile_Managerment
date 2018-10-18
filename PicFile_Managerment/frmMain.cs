@@ -38,6 +38,9 @@ namespace PicFile_Managerment
 
         delegate void Mydelegate(string name, string id);
         Mydelegate md = null;
+        clsFile_Managermentinfo selcetitem;
+        int Rowindex;
+        int Cloumn_index;
 
         #region tree
         private string DBConStr = "";
@@ -169,7 +172,7 @@ namespace PicFile_Managerment
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            var form = new frmNewCreate("", tree_Current_row);
+            var form = new frmNewCreate("", tree_Current_row, null);
 
             if (form.ShowDialog() == DialogResult.OK)
             {
@@ -818,6 +821,19 @@ namespace PicFile_Managerment
 
             return order_ids;
         }
+        private List<string> GetOrderIdsBySelectedGridCell_T_id()
+        {
+
+            List<string> order_ids = new List<string>();
+            var rows = GetSelectedRowsBySelectedCells(dataGridView);
+            foreach (DataGridViewRow row in rows)
+            {
+                var Diningorder = row.DataBoundItem as clsFile_Managermentinfo;
+                order_ids.Add(Diningorder.T_id);
+            }
+
+            return order_ids;
+        }
         private IEnumerable<DataGridViewRow> GetSelectedRowsBySelectedCells(DataGridView dgv)
         {
             List<DataGridViewRow> rows = new List<DataGridViewRow>();
@@ -831,6 +847,76 @@ namespace PicFile_Managerment
             rowcount = dgv.SelectedCells.Count;
 
             return rows.Distinct();
+        }
+
+        private void 删除ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var oids = GetOrderIdsBySelectedGridCell_T_id();
+            if (oids != null && oids.Count > 0 && MessageBox.Show(" 确定删除本条?", "删除确认", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                clsAllnew BusinessHelp = new clsAllnew();
+
+                for (int i = 0; i < oids.Count; i++)
+                {
+                    bool istur = BusinessHelp.deleteFile_Managerment(oids[0].ToString());
+
+                    if (istur == false)
+                    {
+                        MessageBox.Show("删除失败，请重新尝试！" + oids[0].ToString());
+                    }
+
+                }
+                InitializeDataSource();
+            }
+            else
+            {
+                return;
+            }
+
+        }
+
+        private void 编辑属性ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DataGridViewColumn column = dataGridView.Columns[Cloumn_index];
+            var row = dataGridView.Rows[Rowindex];
+            selcetitem = new clsFile_Managermentinfo();
+
+            var model = row.DataBoundItem as clsFile_Managermentinfo;
+
+            selcetitem = model;
+
+            if (selcetitem != null)
+            {
+                var form = new frmNewCreate("", tree_Current_row, selcetitem);
+
+
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+                }
+            }
+        }
+
+        private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewColumn column = dataGridView.Columns[Cloumn_index];
+            var row = dataGridView.Rows[Rowindex];
+            selcetitem = new clsFile_Managermentinfo();
+
+            var model = row.DataBoundItem as clsFile_Managermentinfo;
+
+            selcetitem = model;
+
+        }
+
+        private void dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0 || e.ColumnIndex < 0)
+                return;
+
+            Rowindex = e.RowIndex;
+            Cloumn_index = e.ColumnIndex;
+
+
         }
     }
 }
