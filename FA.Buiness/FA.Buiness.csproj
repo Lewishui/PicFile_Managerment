@@ -41,6 +41,12 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
       <HintPath>..\Reference\Microsoft.Office.Interop.Excel.dll</HintPath>
     </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\Reference\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity">
+      <HintPath>..\Reference\MySql.Data.Entity.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />

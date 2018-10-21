@@ -89,7 +89,7 @@ namespace PicFile_Managerment
         private int deleteNumber = 0;
         #endregion
 
-    
+
 
 
         List<clsAccFileinfo> dailyResult;
@@ -275,6 +275,8 @@ namespace PicFile_Managerment
                         case 6: img.Save(sfd.FileName, System.Drawing.Imaging.ImageFormat.Icon); break;
 
                     }
+                    MessageBox.Show("保存成功！");
+
                 }
             }
         }
@@ -889,7 +891,7 @@ namespace PicFile_Managerment
 
 
                     theRectangle = new Rectangle(startPoint.X, startPoint.Y, e.X - startPoint.X, e.Y - startPoint.Y);
-                   // theRectangle = new Rectangle(startPoint.X, startPoint.Y, oldPoint.X - startPoint.X, oldPoint.Y - startPoint.Y);
+                    // theRectangle = new Rectangle(startPoint.X, startPoint.Y, oldPoint.X - startPoint.X, oldPoint.Y - startPoint.Y);
                     Rectangle rectorg = new Rectangle(borg.X, borg.Y, img.Width, img.Height);
                     if (theRectangle.Width <= 0)
                         return;
@@ -897,9 +899,9 @@ namespace PicFile_Managerment
                         return;
                     if (rectorg.Contains(theRectangle))
                     {
-                       //if (e.X - startPoint.X != 0 && e.Y - startPoint.Y != 0)
+                        //if (e.X - startPoint.X != 0 && e.Y - startPoint.Y != 0)
                         {
-                           Bitmap pic = new Bitmap(fullname);
+                            Bitmap pic = new Bitmap(fullname);
                             Rectangle rectadj = new Rectangle(theRectangle.X - borg.X, theRectangle.Y - borg.Y, theRectangle.Width, theRectangle.Height);
                             Bitmap myBitmap = (Bitmap)pictureBox1.Image.Clone();
 
@@ -922,8 +924,8 @@ namespace PicFile_Managerment
                             //    //   bit.Dispose();
                             //}
                             //pictureBox1.Image = (Image)bit;
-                            
-                          //  CloneImage(startPoint.X, startPoint.Y, e.X - startPoint.X, e.Y - startPoint.Y);
+
+                            //  CloneImage(startPoint.X, startPoint.Y, e.X - startPoint.X, e.Y - startPoint.Y);
                         }
                     }
                     this.Invalidate();
@@ -942,7 +944,7 @@ namespace PicFile_Managerment
             }
 
         }
-     
+
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -1636,7 +1638,7 @@ PixelFormat.Format8bppIndexed
         }
         private void CloneImage(float x, float y, float width, float height)
         {
-           
+
             {
                 //获取图像
                 //Bitmap myBitmap = new Bitmap(fullname);
@@ -1651,7 +1653,7 @@ PixelFormat.Format8bppIndexed
 
                 Bitmap cloneBitmap = myBitmap.Clone(cloneRect, format);
 
-             //   this.pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
+                //   this.pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
 
                 this.pictureBox1.Image = cloneBitmap;
             }
