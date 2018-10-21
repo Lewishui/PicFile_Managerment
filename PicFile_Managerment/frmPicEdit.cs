@@ -68,6 +68,15 @@ namespace PicFile_Managerment
         private int box1_xlcX = 0;
         private int box1_xlcY = 0;
 
+
+
+        bool isDrag = false;
+        Rectangle theRectangle = new Rectangle(new Point(0, 0), new Size(0, 0));
+        Point startPoint, oldPoint;
+        private Graphics ig;
+        Point borg = new Point(20, 20);
+
+
         #region variances
         private string curFileName = null;
         private Bitmap curBitmap = null;
@@ -79,8 +88,12 @@ namespace PicFile_Managerment
         //private int number = 0;
         private int deleteNumber = 0;
         #endregion
-        List<clsAccFileinfo> dailyResult;
 
+    
+
+
+        List<clsAccFileinfo> dailyResult;
+        bool Track_move = false;
         public frmPicEdit(string id)
         {
             InitializeComponent();
@@ -139,8 +152,8 @@ namespace PicFile_Managerment
         }
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            CreateMyListView1();
-            return;
+            //CreateMyListView1();
+            //return;
 
             OpenFileDialog OpenFileDialog1 = new OpenFileDialog();
             OpenFileDialog1.Filter = "bmp,jpg,gif,png,tiff,icon|*.bmp;*.jpg;*.gif;*.png;*.tiff;*.icon";
@@ -188,6 +201,10 @@ namespace PicFile_Managerment
                 #region 第二中显示方法
 
                 pictureBox1.Image = Image.FromFile(fullname);
+                pictureBox1.Width = 587;
+                pictureBox1.Height = 334;
+
+
                 img1 = new Bitmap(fullname);
                 imgview = new Bitmap(img1.Width, img1.Height);
                 PictureWidth = img1.Width.ToString();
@@ -579,8 +596,18 @@ namespace PicFile_Managerment
                 pictureBox1.Image = img;
 
                 //angle是角度
-            }
 
+            }
+            //if (theRectangle.X != 0 && theRectangle.Y != 0 && theRectangle.Height != 0)
+            //{
+            //    Bitmap bitmap = new Bitmap(pictureBox1.Image);
+            //    Bitmap cloneBitmap = bitmap.Clone(theRectangle, PixelFormat.DontCare);
+            //    pictureBox2.Image = (Image)cloneBitmap;
+            //    //graphics.DrawImage(cloneBitmap, e.X, e.Y);
+            //    Graphics g = pictureBox1.CreateGraphics();
+            //    SolidBrush myBrush = new SolidBrush(Color.Transparent);
+            //    g.FillRectangle(myBrush, theRectangle);
+            //}
         }
 
         private void frmPicEdit_Load(object sender, EventArgs e)
@@ -699,6 +726,27 @@ namespace PicFile_Managerment
                     this.pictureBox1.Invalidate();  //使控件的整个图面无效，并导致重绘控件
                 }
             }
+            if (isDrag == true)
+            {
+                if (Track_move)
+                    oldPoint = new Point(e.X, e.Y);
+                else
+                {
+                    return;
+                }
+                theRectangle = new Rectangle(startPoint.X, startPoint.Y, oldPoint.X - startPoint.X, oldPoint.Y - startPoint.Y);
+
+                Rectangle tempr = new Rectangle(theRectangle.X, theRectangle.Y, theRectangle.Width + 2, theRectangle.Height + 2);
+                this.Invalidate(tempr);
+
+            }
+
+            //cut line color
+            if (this.Cursor == Cursors.Cross)
+            {
+                this.p2 = new Point(e.X, e.Y);
+                this.pictureBox1.Invalidate();
+            }
         }
 
         private void pictureBox1_MouseWheel(object sender, MouseEventArgs e)
@@ -746,12 +794,16 @@ namespace PicFile_Managerment
 
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
+            if (e.Button == MouseButtons.Left && isDrag == false)
             {
                 mouseDownPoint.X = Cursor.Position.X;
                 mouseDownPoint.Y = Cursor.Position.Y;
                 isMove = true;
                 pictureBox1.Focus();
+                //如果开始绘制，则开始记录鼠标位置
+
+
+
             }
             if (cautimage == true)
             {
@@ -767,7 +819,26 @@ namespace PicFile_Managerment
                 {
                     HeadImageBool = false;
                 }
+
             }
+            if (e.Button == MouseButtons.Left && isDrag == true)
+            {
+                // startPoint = new Point(Cursor.Position.X, Cursor.Position.Y);
+                startPoint = new Point(e.X, e.Y);
+                oldPoint = new Point(e.X, e.Y);
+                Track_move = true;
+                return;
+
+            }
+            Track_move = false;
+
+
+            //cut line color
+
+            this.Cursor = Cursors.Cross;
+            this.p1 = new Point(e.X, e.Y);
+
+
         }
 
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
@@ -780,7 +851,7 @@ namespace PicFile_Managerment
                 }
                 if (cautimage == true)
                 {
-                    /////
+                    ///
                     if (HeadImageBool)
                     {
                         width = this.pictureBox1.Image.Width;
@@ -811,6 +882,57 @@ namespace PicFile_Managerment
                         this.Cursor = Cursors.Default;
                     }
                 }
+                if (isDrag == true && e.Button == MouseButtons.Left && Track_move == true)
+                {
+                    Track_move = false;
+                    oldPoint = new Point(e.X, e.Y);
+
+
+                    theRectangle = new Rectangle(startPoint.X, startPoint.Y, e.X - startPoint.X, e.Y - startPoint.Y);
+                   // theRectangle = new Rectangle(startPoint.X, startPoint.Y, oldPoint.X - startPoint.X, oldPoint.Y - startPoint.Y);
+                    Rectangle rectorg = new Rectangle(borg.X, borg.Y, img.Width, img.Height);
+                    if (theRectangle.Width <= 0)
+                        return;
+                    if (theRectangle.Height <= 0)
+                        return;
+                    if (rectorg.Contains(theRectangle))
+                    {
+                       //if (e.X - startPoint.X != 0 && e.Y - startPoint.Y != 0)
+                        {
+                           Bitmap pic = new Bitmap(fullname);
+                            Rectangle rectadj = new Rectangle(theRectangle.X - borg.X, theRectangle.Y - borg.Y, theRectangle.Width, theRectangle.Height);
+                            Bitmap myBitmap = (Bitmap)pictureBox1.Image.Clone();
+
+                            Bitmap p111ic = GetRect(pic, theRectangle);
+                            pictureBox1.Image = p111ic;
+                            pictureBox1.Width = p111ic.Width;
+                            pictureBox1.Height = p111ic.Height;
+                            isDrag = false;
+
+
+
+
+                            //Bitmap bit = new Bitmap(theRectangle.Width, theRectangle.Height);
+                            //using (Graphics g = Graphics.FromImage(bit))
+                            //{
+                            //    g.DrawImage(pictureBox1.Image, new Rectangle(0, 0, theRectangle.Width, theRectangle.Height), new Rectangle(startPoint.X, startPoint.Y, theRectangle.Width, theRectangle.Height), GraphicsUnit.Pixel);
+                            //    //  bit.Save(saveBitmapPath + "\\" + frame + ".bmp", System.Drawing.Imaging.ImageFormat.Bmp);
+                            //    // bit.Save("C:\\Users\\IBM_ADMIN\\Desktop\\1" + ".bmp", ImageFormat.Bmp);
+                            //    // bit.Save("C:\\Users\\IBM_ADMIN\\Desktop" + "\\1" + ".bmp", System.Drawing.Imaging.ImageFormat.Bmp);
+                            //    //   bit.Dispose();
+                            //}
+                            //pictureBox1.Image = (Image)bit;
+                            
+                          //  CloneImage(startPoint.X, startPoint.Y, e.X - startPoint.X, e.Y - startPoint.Y);
+                        }
+                    }
+                    this.Invalidate();
+                }
+
+                //cut line color
+                //this.Cursor = Cursors.Default;
+                //this.p2 = new Point(e.X, e.Y);
+
             }
             catch (Exception ex)
             {
@@ -820,7 +942,7 @@ namespace PicFile_Managerment
             }
 
         }
-
+     
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -1098,25 +1220,7 @@ namespace PicFile_Managerment
 
             ////good use
             #endregion
-            #region 好用
-            //System.Drawing.Graphics e = System.Drawing.Graphics.FromImage(image);
-            //System.Drawing.Font f = new System.Drawing.Font(a, Fsize, Fstyle);
-            //System.Drawing.Brush b = new System.Drawing.SolidBrush(Fcolor);
-            //e.DrawString("Text 2016", f, b, x, y);
-            //SizeF XMaxSize = e.MeasureString("Text 2016", f);
 
-            //Fwidth = (int)XMaxSize.Width;
-            //Fheight = (int)XMaxSize.Height;
-
-            //e.Dispose();
-            //imgBack = image;
-
-            //Graphics g = Graphics.FromImage(imgBack);
-            //g.DrawImage(img, 照片与相框的左边距, 照片与相框的上边距, 照片宽, 照片高);
-            //g.DrawImage(img, p2x - p1x, p2y - p1y, p1x, p1y);
-            ////  g.DrawImage(img, 17, 17, 112, 73);
-            //GC.Collect();
-            #endregion
 
             return imgBack;
         }
@@ -1222,9 +1326,18 @@ PixelFormat.Format8bppIndexed
         }
         private void cutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            cautimage = true;
+            //  cautimage = true;
+            isDrag = true;
+            isMove = false;
+            var form = new frmCutImage(fullname, img1);
+            //var form = new frmCut2(fullname, img1);
 
+            if (form.ShowDialog() == DialogResult.OK)
+            {
 
+                img = form.image1;
+                pictureBox1.Image = (Image)img;
+            }
         }
 
         private void 图片特效ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1267,18 +1380,6 @@ PixelFormat.Format8bppIndexed
                 slide.ShowDialog();
             }
         }
-
-
-
-        //public static Stream ConvertImage(this Stream originalStream, ImageFormat format)
-        //{
-        //    var image = Image.FromStream(originalStream);
-
-        //    var stream = new MemoryStream();
-        //    image.Save(stream, format);
-        //    stream.Position = 0;
-        //    return stream;
-        //}
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
@@ -1514,6 +1615,55 @@ PixelFormat.Format8bppIndexed
                 listView1.Items[i].ImageIndex = i;
             }
 
+        }
+
+        #region cut
+        public Bitmap GetRect(Image pic, Rectangle Rect)
+        {
+            if (Rect.Width == 0 || Rect.Height == 0)
+                return null;
+
+            //创建图像
+            Rectangle drawRect = new Rectangle(0, 0, Rect.Width, Rect.Height);  //绘制整块区域
+            Bitmap tmp = new Bitmap(drawRect.Width, drawRect.Height);           //按指定大小创建位图
+
+            //绘制
+            Graphics g = Graphics.FromImage(tmp);                   //从位图创建Graphics对象
+            g.Clear(Color.FromArgb(0, 0, 0, 0));                    //清空
+            g.DrawImage(pic, drawRect, Rect, GraphicsUnit.Pixel);   //从pic的给定区域进行绘制
+
+            return tmp;     //返回构建的新图像
+        }
+        private void CloneImage(float x, float y, float width, float height)
+        {
+           
+            {
+                //获取图像
+                //Bitmap myBitmap = new Bitmap(fullname);
+
+                Bitmap myBitmap = (Bitmap)pictureBox1.Image.Clone();
+
+
+
+                //设定图像剪切区域
+                RectangleF cloneRect = new RectangleF(x, y, width, height);
+                PixelFormat format = myBitmap.PixelFormat;
+
+                Bitmap cloneBitmap = myBitmap.Clone(cloneRect, format);
+
+             //   this.pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
+
+                this.pictureBox1.Image = cloneBitmap;
+            }
+        }
+        #endregion
+
+        private void pictureBox1_Paint(object sender, PaintEventArgs e)
+        {
+            //Pen p = new Pen(Color.Black, 1);//画笔
+            //p.DashStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            //Rectangle rect = new Rectangle(p1, new Size(p2.X - p1.X, p2.Y - p1.Y));
+            //e.Graphics.DrawRectangle(p, rect);
         }
     }
 

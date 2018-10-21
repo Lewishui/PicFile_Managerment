@@ -35,13 +35,15 @@ namespace PicFile_Managerment
         string strFileName;
         int rowcount = 0;
         string user_or_admin;
-
+        DateTime startAt;
+        DateTime endAt;
         delegate void Mydelegate(string name, string id);
         Mydelegate md = null;
         clsFile_Managermentinfo selcetitem;
         int Rowindex;
         int Cloumn_index;
-
+        string ioState;
+        string nametext;
         #region tree
         private string DBConStr = "";
         private string AppPath = "";
@@ -315,6 +317,19 @@ namespace PicFile_Managerment
                 string saadsd = row["NodeID"].ToString();
                 InitializeDataSource();
                 //   md(name, tag);
+            }
+            else
+            {
+
+                DataRow row = (DataRow)e.Node.Tag;
+                tree_Current_row = pDataTable.NewRow();
+                tree_Current_row = row;
+
+                if (row == null) { return; }
+
+                string saadsd = row["NodeID"].ToString();
+                InitializeDataSource();
+            
             }
         }
         /// <summary>
@@ -781,13 +796,41 @@ namespace PicFile_Managerment
                 conditions = "select * from File_Managerment where NodeID  like '%" + tree_Current_row["NodeID"].ToString() + "%'";//成功
                 xianjinliuJINGE_Result = BusinessHelp.find_File_Managerment(ref this.bgWorker, conditions);
 
+                ShowDav();
+
+            }
+
+
+        }
+
+        private void ShowDav()
+        {
+            this.toolStripLabel2.Text = "";
+
+            if (xianjinliuJINGE_Result != null && xianjinliuJINGE_Result.Count > 0)
+            {
                 sortablezichanfuzaibiaoList = new SortableBindingList<clsFile_Managermentinfo>(xianjinliuJINGE_Result);
                 this.bindingSource1.DataSource = this.sortablezichanfuzaibiaoList;
                 dataGridView.AutoGenerateColumns = false;
                 dataGridView.DataSource = this.bindingSource1;
+
+                int Tfenshu = (from s in sortablezichanfuzaibiaoList
+                                  where Convert.ToInt64(s.T_id) > 0
+                                  select Convert.ToInt32(s.fenshu)).Sum();
+
+                int Tyeshu = (from s in sortablezichanfuzaibiaoList
+                               where Convert.ToInt64(s.T_id) > 0
+                               select Convert.ToInt32(s.yeshu)).Sum();
+
+
+                this.toolStripLabel2.Text = "总计：" + sortablezichanfuzaibiaoList.Count + " 条" + "  份数:" + Tfenshu.ToString() + "  页数:" + Tyeshu.ToString();
+          
             }
-
-
+            else
+            {
+                this.toolStripLabel2.Text = "未找到";
+                dataGridView.DataSource = null;
+            }
         }
 
         private void toolStripDropDownButton1_Click(object sender, EventArgs e)
@@ -882,14 +925,11 @@ namespace PicFile_Managerment
             selcetitem = new clsFile_Managermentinfo();
 
             var model = row.DataBoundItem as clsFile_Managermentinfo;
-
             selcetitem = model;
 
             if (selcetitem != null)
             {
                 var form = new frmNewCreate("", tree_Current_row, selcetitem);
-
-
                 if (form.ShowDialog() == DialogResult.OK)
                 {
                 }
@@ -917,6 +957,85 @@ namespace PicFile_Managerment
             Cloumn_index = e.ColumnIndex;
 
 
+        }
+        private void ReadOtherinfo()
+        {
+            startAt = this.dateTimePicker1.Value.AddDays(0).Date;
+            endAt = this.dateTimePicker2.Value.AddDays(0).Date;
+            ioState = this.textBox1.Text;
+            nametext = this.textBox2.Text;
+            
+        }
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            ReadOtherinfo();
+
+            if (textBox1.Text != "")
+            {
+                clsAllnew BusinessHelp = new clsAllnew();
+
+                string conditions = "";
+                //conditions = "select * from File_Managerment where wenjianbiaohao  like '%" + this.textBox1.Text.ToString() + "%'";//成功
+
+                conditions = "select * from File_Managerment where dengjiriqi >= '" + startAt.ToString("MM/dd/yyyy") + "' AND dengjiriqi<='" + endAt.ToString("MM/dd/yyyy") + "'";
+                if (ioState.Length > 0)
+                {
+                    conditions += " And wenjianbiaohao like '%" + ioState + "%'";
+                }
+                if (nametext.Length > 0)
+                {
+                    conditions += " And biaoti like '%" + nametext + "%'";
+                }
+
+
+                xianjinliuJINGE_Result = BusinessHelp.find_File_Managerment(ref this.bgWorker, conditions);
+                ShowDav();
+            }
+            else
+            {
+
+                MessageBox.Show("请输入相关查找信息", "查找", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+        }
+
+        private void toolStripDropDownButton5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
+
+        private void toolStripDropDownButton3_Click(object sender, EventArgs e)
+        {
+           
+
+        }
+
+        private void toolStripDropDownButton2_Click(object sender, EventArgs e)
+        {
+            clsAllnew BusinessHelp = new clsAllnew();
+
+            BusinessHelp.downcsv(dataGridView);
+        }
+
+        private void 编辑图片ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var oids = GetOrderIdsBySelectedGridCell();
+            if (oids.Count > 0)
+            {
+
+                var form = new frmPicEdit(oids[0].ToString());
+
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+
+                }
+            }
+        }
+
+        private void 编辑属性ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            编辑属性ToolStripMenuItem_Click(null, EventArgs.Empty);
         }
     }
 }

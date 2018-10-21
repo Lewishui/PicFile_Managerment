@@ -35,7 +35,7 @@ namespace PicFile_Managerment
                 //return;
             }
             #endregion
-            Application.Run(new frmLogin());
+            Application.Run(new frmLogin());//frmLogin
         }
     }
 }

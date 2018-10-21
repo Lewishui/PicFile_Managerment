@@ -158,7 +158,7 @@ namespace FA.Buiness
                 {
 
                     string sql = "";
-                    sql = "insert into File_Managerment(wenjianbiaohao,biaoti,wenhao,zhiwendanwei,xingwendanwei,dengjiriqi,miji,wenjianleibie,yeshu,fenshu,accfile_id,beizhu,NodeID) values ('" + item.wenjianbiaohao + "','" + item.biaoti + "',N'" + item.wenhao + "','" + item.zhiwendanwei + "','" + item.xingwendanwei + "','" + item.dengjiriqi + "','" + item.miji + "','" + item.wenjianleibie + "',N'" + item.yeshu + "',N'" + item.fenshu + "',N'" + item.accfile_id + "',N'" + item.beizhu + "',N'" + item.NodeID + "')";
+                    sql = "insert into File_Managerment(wenjianbiaohao,biaoti,wenhao,zhiwendanwei,xingwendanwei,dengjiriqi,miji,wenjianleibie,yeshu,fenshu,accfile_id,beizhu,NodeID,wenjianqiriqi,wenjianzhiriqi,baoguanqixian) values ('" + item.wenjianbiaohao + "','" + item.biaoti + "',N'" + item.wenhao + "','" + item.zhiwendanwei + "','" + item.xingwendanwei + "','" + item.dengjiriqi + "','" + item.miji + "','" + item.wenjianleibie + "',N'" + item.yeshu + "',N'" + item.fenshu + "',N'" + item.accfile_id + "',N'" + item.beizhu + "',N'" + item.NodeID + "','" + item.wenjianqiriqi + "','" + item.wenjianzhiriqi + "','" + item.baoguanqixian + "')";
 
                     OleDbCommand cmd = new OleDbCommand(sql, con);
                     cmd.ExecuteNonQuery();
@@ -247,6 +247,18 @@ namespace FA.Buiness
                     if (item.NodeID != null)
                     {
                         conditions += " ,NodeID ='" + item.NodeID + "'";
+                    }
+                    if (item.wenjianqiriqi != null)
+                    {
+                        conditions += " ,wenjianqiriqi ='" + item.wenjianqiriqi + "'";
+                    }
+                    if (item.wenjianzhiriqi != null)
+                    {
+                        conditions += " ,wenjianzhiriqi ='" + item.wenjianzhiriqi + "'";
+                    }
+                    if (item.baoguanqixian != null)
+                    {
+                        conditions += " ,baoguanqixian ='" + item.baoguanqixian + "'";
                     }
                     conditions = "update File_Managerment set  " + conditions + " where T_id = " + item.T_id + " ";
                     sql = conditions;
@@ -389,7 +401,7 @@ namespace FA.Buiness
         public List<clsFile_Managermentinfo> find_File_Managerment(ref BackgroundWorker bgWorker, string text)
         {
 
-            bgWorker1 = bgWorker;
+         bgWorker1 = bgWorker;
 
             OleDbConnection aConnection = new OleDbConnection(ConStr);
             try
@@ -434,6 +446,14 @@ namespace FA.Buiness
                         tempnote.beizhu = emp["beizhu"].ToString();
                     if (emp["NodeID"].ToString() != "")
                         tempnote.NodeID = emp["NodeID"].ToString();
+
+                    if (emp["wenjianqiriqi"].ToString() != "")
+                        tempnote.wenjianqiriqi = emp["wenjianqiriqi"].ToString();
+
+                    if (emp["wenjianzhiriqi"].ToString() != "")
+                        tempnote.wenjianzhiriqi = emp["wenjianzhiriqi"].ToString();
+                    if (emp["baoguanqixian"].ToString() != "")
+                        tempnote.baoguanqixian = emp["baoguanqixian"].ToString();
 
                     dailyResult.Add(tempnote);
 
@@ -572,5 +592,60 @@ namespace FA.Buiness
             finally { if (con.State == ConnectionState.Open) con.Close(); con.Dispose(); }
 
         }
+        public void downcsv(DataGridView dataGridView)
+        {
+            if (dataGridView.Rows.Count == 0)
+            {
+                MessageBox.Show("Sorry , No Data Output !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            var saveFileDialog = new SaveFileDialog();
+            saveFileDialog.DefaultExt = ".csv";
+            saveFileDialog.Filter = "csv|*.csv";
+            string strFileName = "  下载信息" + "_" + DateTime.Now.ToString("yyyyMMddHHmmss");
+            saveFileDialog.FileName = strFileName;
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                strFileName = saveFileDialog.FileName.ToString();
+            }
+            else
+            {
+                return;
+            }
+            FileStream fa = new FileStream(strFileName, FileMode.Create);
+            StreamWriter sw = new StreamWriter(fa, Encoding.Unicode);
+            string delimiter = "\t";
+            string strHeader = "";
+            for (int i = 0; i < dataGridView.Columns.Count; i++)
+            {
+                strHeader += dataGridView.Columns[i].HeaderText + delimiter;
+            }
+            sw.WriteLine(strHeader);
+
+            //output rows data
+            for (int j = 0; j < dataGridView.Rows.Count; j++)
+            {
+                string strRowValue = "";
+
+                for (int k = 0; k < dataGridView.Columns.Count; k++)
+                {
+                    if (dataGridView.Rows[j].Cells[k].Value != null)
+                    {
+                        strRowValue += dataGridView.Rows[j].Cells[k].Value.ToString().Replace("\r\n", " ").Replace("\n", "") + delimiter;
+
+
+                    }
+                    else
+                    {
+                        strRowValue += dataGridView.Rows[j].Cells[k].Value + delimiter;
+                    }
+                }
+                sw.WriteLine(strRowValue);
+            }
+            sw.Close();
+            fa.Close();
+            MessageBox.Show("下载完成 ！", "System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
     }
 }

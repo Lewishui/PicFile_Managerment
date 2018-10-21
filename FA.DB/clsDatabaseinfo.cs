@@ -46,6 +46,10 @@ namespace FA.DB
         public string wenjianleibie { get; set; }
         public string yeshu { get; set; }
         public string fenshu { get; set; }
+        public string wenjianqiriqi { get; set; }
+        public string wenjianzhiriqi { get; set; }
+        public string baoguanqixian { get; set; }
+      
         public string accfile_id { get; set; }
 
         public string beizhu { get; set; }

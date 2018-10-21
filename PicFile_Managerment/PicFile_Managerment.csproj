@@ -84,6 +84,18 @@
     <Compile Include="frmAboutBox.Designer.cs">
       <DependentUpon>frmAboutBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCut2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCut2.Designer.cs">
+      <DependentUpon>frmCut2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCutImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCutImage.Designer.cs">
+      <DependentUpon>frmCutImage.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +161,12 @@
     <Compile Include="TreeViewUtil.cs" />
     <EmbeddedResource Include="frmAboutBox.resx">
       <DependentUpon>frmAboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCut2.resx">
+      <DependentUpon>frmCut2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCutImage.resx">
+      <DependentUpon>frmCutImage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

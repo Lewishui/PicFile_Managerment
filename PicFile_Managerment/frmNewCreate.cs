@@ -32,7 +32,21 @@ namespace PicFile_Managerment
 
             tree_Current_row = tree_Current_row1;
             if (iitem == null)
-                textBox7.Text = tree_Current_row["Description"].ToString();
+            {
+
+                try
+                {
+                    textBox7.Text = tree_Current_row["Description"].ToString();
+
+                }
+                catch  
+                {
+                    
+                  
+                }
+                this.comboBox1.SelectedIndex = 0;
+
+            }
             else
             {
                 this.txname.Text = iitem.wenjianbiaohao;
@@ -45,7 +59,11 @@ namespace PicFile_Managerment
                 textBox7.Text = tree_Current_row["Description"].ToString();
                 textBox8.Text = iitem.yeshu;
                 textBox9.Text = iitem.fenshu;
-
+                if (iitem.wenjianqiriqi!=null)
+                this.dateTimePicker3.Value = Convert.ToDateTime(iitem.wenjianqiriqi);
+                if (iitem.wenjianzhiriqi != null)
+                this.dateTimePicker2.Value = Convert.ToDateTime(iitem.wenjianzhiriqi);
+                this.comboBox1.Text = iitem.baoguanqixian;
 
                 clsAllnew BusinessHelp = new clsAllnew();
                 List<clsAccFileinfo> dailyResult = new List<clsAccFileinfo>();
@@ -87,6 +105,12 @@ namespace PicFile_Managerment
 
                 iitem.yeshu = textBox8.Text;
                 iitem.fenshu = textBox9.Text;
+
+                iitem.wenjianqiriqi = this.dateTimePicker3.Value.AddDays(0).Date.ToString("MM/dd/yyyy"); ;
+                iitem.wenjianzhiriqi = this.dateTimePicker2.Value.AddDays(0).Date.ToString("MM/dd/yyyy"); ;
+                iitem.baoguanqixian = this.comboBox1.Text;
+
+
                 string ACCid = clsCommHelp.RandomID();
 
 
@@ -102,7 +126,7 @@ namespace PicFile_Managerment
                         temp.mark1 += filename[i];
                     temp.File_name = System.IO.Path.GetFileName(temp.mark1);
                     temp.accfile_id = ACCid;
-                   // var strs = System.IO.Directory.GetFiles(temp.mark1.Replace(System.IO.Path.GetFileName(temp.mark1), "")).Where(file => file.ToLower().EndsWith("jpg") || file.ToLower().EndsWith("gif") || file.ToLower().EndsWith("jpeg") || file.ToLower().EndsWith("png")).ToList();
+                    // var strs = System.IO.Directory.GetFiles(temp.mark1.Replace(System.IO.Path.GetFileName(temp.mark1), "")).Where(file => file.ToLower().EndsWith("jpg") || file.ToLower().EndsWith("gif") || file.ToLower().EndsWith("jpeg") || file.ToLower().EndsWith("png")).ToList();
                     //foreach (string file in strs)
                     {
                         //System.IO.FileInfo fi = new System.IO.FileInfo(file);
@@ -111,7 +135,7 @@ namespace PicFile_Managerment
                         //if (File.Exists(copyToPath))
                         {
 
-                            File.Copy(temp.mark1.Replace(",",""), copyToPath, true);
+                            File.Copy(temp.mark1.Replace(",", ""), copyToPath, true);
                         }
                         temp.mark1 = copyToPath;
                     }
@@ -133,9 +157,9 @@ namespace PicFile_Managerment
                 else
                 {
                     BusinessHelp.InsterFile_detail_Server(File_Result);
-                  
+
                 }
-                  BusinessHelp.InsteraccFile_Server(accFile_Result);
+                BusinessHelp.InsteraccFile_Server(accFile_Result);
                 MessageBox.Show("成功！", "信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
