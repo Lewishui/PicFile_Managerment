@@ -44,10 +44,10 @@ D:\Dev Project\PIC_control\PicFile_Managerment\FA.Buiness\bin\Debug\FA.Buiness.p
 D:\Dev Project\PIC_control\PicFile_Managerment\FA.Buiness\bin\Debug\FA.Common.dll
 D:\Dev Project\PIC_control\PicFile_Managerment\FA.Buiness\bin\Debug\FA.DB.dll
 D:\Dev Project\PIC_control\PicFile_Managerment\FA.Buiness\bin\Debug\log4net.dll
+D:\Dev Project\PIC_control\PicFile_Managerment\FA.Buiness\bin\Debug\MySql.Data.dll
+D:\Dev Project\PIC_control\PicFile_Managerment\FA.Buiness\bin\Debug\MySql.Data.Entity.dll
 D:\Dev Project\PIC_control\PicFile_Managerment\FA.Buiness\bin\Debug\FA.Common.pdb
 D:\Dev Project\PIC_control\PicFile_Managerment\FA.Buiness\bin\Debug\FA.DB.pdb
 D:\Dev Project\PIC_control\PicFile_Managerment\FA.Buiness\obj\Debug\FA.Buiness.csprojResolveAssemblyReference.cache
 D:\Dev Project\PIC_control\PicFile_Managerment\FA.Buiness\obj\Debug\FA.Buiness.dll
 D:\Dev Project\PIC_control\PicFile_Managerment\FA.Buiness\obj\Debug\FA.Buiness.pdb
-D:\Dev Project\PIC_control\PicFile_Managerment\FA.Buiness\bin\Debug\MySql.Data.dll
-D:\Dev Project\PIC_control\PicFile_Managerment\FA.Buiness\bin\Debug\MySql.Data.Entity.dll

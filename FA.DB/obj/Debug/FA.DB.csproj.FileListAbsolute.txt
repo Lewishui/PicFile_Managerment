@@ -19,6 +19,5 @@ D:\Dev Project\PIC_control\BJ_FAautomaion\FA.DB\obj\Debug\FA.DB.dll
 D:\Dev Project\PIC_control\BJ_FAautomaion\FA.DB\obj\Debug\FA.DB.pdb
 D:\Dev Project\PIC_control\PicFile_Managerment\FA.DB\bin\Debug\FA.DB.dll
 D:\Dev Project\PIC_control\PicFile_Managerment\FA.DB\bin\Debug\FA.DB.pdb
-D:\Dev Project\PIC_control\PicFile_Managerment\FA.DB\obj\Debug\FA.DB.csprojResolveAssemblyReference.cache
 D:\Dev Project\PIC_control\PicFile_Managerment\FA.DB\obj\Debug\FA.DB.dll
 D:\Dev Project\PIC_control\PicFile_Managerment\FA.DB\obj\Debug\FA.DB.pdb
