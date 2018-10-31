@@ -130,10 +130,12 @@ namespace PicFile_Managerment
                     //产生图像对象
 
                     //imageListSmall.Images.Add(Bitmap.FromFile(item.mark1));
+                    if (File.Exists(item.mark1))
+                    {
+                        imageListSmall.Images.Add(Image.FromFile(item.mark1));
 
-                    imageListSmall.Images.Add(Image.FromFile(item.mark1));
-
-                    imageListSmall.ImageSize = new Size(64, 64);// new Point(32, 32);
+                        imageListSmall.ImageSize = new Size(64, 64);// new Point(32, 32);
+                    }
                 }
                 listView1.View = View.LargeIcon;
                 listView1.LargeImageList = imageListSmall;
