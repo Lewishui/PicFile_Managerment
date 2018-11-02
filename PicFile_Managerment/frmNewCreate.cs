@@ -21,7 +21,7 @@ namespace PicFile_Managerment
         List<string> filename = new List<string>();
         int comboxi;
         string comboxiname;
-
+        string LIST = "";
         DataRow tree_Current_row;
         clsFile_Managermentinfo iitem1;
         public frmNewCreate(string ty, DataRow tree_Current_row1, clsFile_Managermentinfo iitem)
@@ -39,10 +39,10 @@ namespace PicFile_Managerment
                     textBox7.Text = tree_Current_row["Description"].ToString();
 
                 }
-                catch  
+                catch
                 {
-                    
-                  
+
+
                 }
                 this.comboBox1.SelectedIndex = 0;
 
@@ -59,18 +59,32 @@ namespace PicFile_Managerment
                 textBox7.Text = tree_Current_row["Description"].ToString();
                 textBox8.Text = iitem.yeshu;
                 textBox9.Text = iitem.fenshu;
-                if (iitem.wenjianqiriqi!=null)
-                this.dateTimePicker3.Value = Convert.ToDateTime(iitem.wenjianqiriqi);
+                if (iitem.wenjianqiriqi != null)
+                    this.dateTimePicker3.Value = Convert.ToDateTime(iitem.wenjianqiriqi);
                 if (iitem.wenjianzhiriqi != null)
-                this.dateTimePicker2.Value = Convert.ToDateTime(iitem.wenjianzhiriqi);
+                    this.dateTimePicker2.Value = Convert.ToDateTime(iitem.wenjianzhiriqi);
                 this.comboBox1.Text = iitem.baoguanqixian;
+
+                textBox5.Text = iitem.beizhu1;
+
+                textBox10.Text = iitem.beizhu2;
+
+                textBox12.Text = iitem.beizhu3;
+
+                textBox13.Text = iitem.beizhu4;
+
+                textBox14.Text = iitem.beizhu5;
+
 
                 clsAllnew BusinessHelp = new clsAllnew();
                 List<clsAccFileinfo> dailyResult = new List<clsAccFileinfo>();
-                string conditions = "";
-                conditions = "select * from AccFile where accfile_id='" + iitem.accfile_id + "'";
-                dailyResult = BusinessHelp.find_ACCFile(conditions);
-                listBox1.Items.Clear();
+                if (iitem.accfile_id != null)
+                {
+                    string conditions = "";
+                    conditions = "select * from AccFile where accfile_id='" + iitem.accfile_id + "'";
+                    dailyResult = BusinessHelp.find_ACCFile(conditions);
+                    listBox1.Items.Clear();
+                }
                 filename = new List<string>();
                 foreach (clsAccFileinfo s in dailyResult)
                 {
@@ -110,11 +124,21 @@ namespace PicFile_Managerment
                 iitem.wenjianzhiriqi = this.dateTimePicker2.Value.AddDays(0).Date.ToString("MM/dd/yyyy"); ;
                 iitem.baoguanqixian = this.comboBox1.Text;
 
+                //备注
+                iitem.beizhu1 = textBox5.Text;
+                iitem.beizhu2 = textBox10.Text;
+                iitem.beizhu3 = textBox12.Text;
+                iitem.beizhu4 = textBox13.Text;
+                iitem.beizhu5 = textBox14.Text;
+
 
                 string ACCid = clsCommHelp.RandomID();
 
+                if (filename.Count > 0)
+                    iitem.accfile_id = ACCid;
+                else
+                    iitem.accfile_id = "";
 
-                iitem.accfile_id = ACCid;
                 List<clsAccFileinfo> accFile_Result = new List<clsAccFileinfo>();
                 for (int i = 0; i < filename.Count; i++)
                 {
@@ -197,6 +221,7 @@ namespace PicFile_Managerment
                     listBox1.Items.Add(s);
                 }
             }
+            sumNewMethod();
         }
 
         private void 删除所选ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -209,7 +234,7 @@ namespace PicFile_Managerment
             {
                 listBox1.Items.Add(System.IO.Path.GetFileName(s));
             }
-
+            sumNewMethod();
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -219,6 +244,86 @@ namespace PicFile_Managerment
                 comboxi = this.listBox1.SelectedIndex;
                 comboxiname = this.listBox1.SelectedItem.ToString();
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            var saveFileDialog = new SaveFileDialog();
+            saveFileDialog.DefaultExt = ".pdf";
+            saveFileDialog.Filter = "pdf|*.pdf";
+            string strFileName = "  下载信息" + "_" + DateTime.Now.ToString("yyyyMMddHHmmss");
+            saveFileDialog.FileName = strFileName;
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                strFileName = saveFileDialog.FileName.ToString();
+            }
+            else
+            {
+                return;
+            }
+            for (int i = 0; i < filename.Count; i++)
+            {
+                if (File.Exists(filename[i]))
+                {
+                    if (MessageBox.Show(" 检测本地目录不存在?" + filename[i], "是否继续", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    {
+                    }
+                    else
+                        return;
+
+                }
+            }
+
+            string[] astr = filename.ToArray();
+            bool istrue = false;
+
+            for (int i = 0; i < astr.Length; i++)
+            {
+                if (String.IsNullOrEmpty(astr[i])) break;
+
+                if (File.Exists(astr[i]))
+                    istrue = true;
+            }
+            if (istrue == true)
+                clsCommHelp.pdfMain(astr, strFileName);
+
+            MessageBox.Show("下载完成！", "PDF", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+           // if (filename.Count > 0)
+            {
+                if (iitem1.accfile_id != null && iitem1.accfile_id != "")
+                {
+                    var form = new frmPicEdit(iitem1.accfile_id, iitem1);
+
+                    if (form.ShowDialog() == DialogResult.OK)
+                    {
+
+                    }
+                }
+            }
+        }
+
+        private void listBox1_MouseMove(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void listBox1_MouseLeave(object sender, EventArgs e)
+        {
+            sumNewMethod();
+
+        }
+
+        private void sumNewMethod()
+        {
+            textBox8.Text = this.listBox1.Items.Count.ToString();
         }
     }
 }

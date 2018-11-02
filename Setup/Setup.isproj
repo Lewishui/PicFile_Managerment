@@ -27,4 +27,11 @@
 		</TaggedOutputs> -->
 	</ItemGroup>
 	<Import Project="$(MSBuildExtensionsPath32)\InstallShield\2012SpringLimited\InstallShield.targets"/>
-</Project>
+	<ItemGroup>
+		<ProjectReference Include="..\PicFile_Managerment\PicFile_Managerment.csproj">
+			<Name>PicFile_Managerment</Name>
+			<Project>{5BC16567-C2A2-4585-8507-71BF4F5E2D42}</Project>
+		</ProjectReference>
+	</ItemGroup>
+
+	</Project>

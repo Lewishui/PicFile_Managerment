@@ -329,7 +329,7 @@ namespace PicFile_Managerment
 
                 string saadsd = row["NodeID"].ToString();
                 InitializeDataSource();
-            
+
             }
         }
         /// <summary>
@@ -815,16 +815,16 @@ namespace PicFile_Managerment
                 dataGridView.DataSource = this.bindingSource1;
 
                 int Tfenshu = (from s in sortablezichanfuzaibiaoList
-                                  where Convert.ToInt64(s.T_id) > 0
-                                  select Convert.ToInt32(s.fenshu)).Sum();
+                               where Convert.ToInt64(s.T_id) > 0
+                               select Convert.ToInt32(s.fenshu)).Sum();
 
                 int Tyeshu = (from s in sortablezichanfuzaibiaoList
-                               where Convert.ToInt64(s.T_id) > 0
-                               select Convert.ToInt32(s.yeshu)).Sum();
+                              where Convert.ToInt64(s.T_id) > 0
+                              select Convert.ToInt32(s.yeshu)).Sum();
 
 
                 this.toolStripLabel2.Text = "总计：" + sortablezichanfuzaibiaoList.Count + " 条" + "  份数:" + Tfenshu.ToString() + "  页数:" + Tyeshu.ToString();
-          
+
             }
             else
             {
@@ -835,7 +835,22 @@ namespace PicFile_Managerment
 
         private void toolStripDropDownButton1_Click(object sender, EventArgs e)
         {
+            var oids = GetOrderIdsBySelectedGridCell();
+            if (oids.Count > 0)
+            {
 
+                var form = new frmPicEdit(oids[0].ToString(), selcetitem);
+
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("请选择类目再次尝试！");
+
+            }
         }
 
         private void 编辑图片ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -843,7 +858,7 @@ namespace PicFile_Managerment
             var oids = GetOrderIdsBySelectedGridCell();
 
 
-            var form = new frmPicEdit(oids[0].ToString());
+            var form = new frmPicEdit(oids[0].ToString(), selcetitem);
 
             if (form.ShowDialog() == DialogResult.OK)
             {
@@ -932,6 +947,7 @@ namespace PicFile_Managerment
                 var form = new frmNewCreate("", tree_Current_row, selcetitem);
                 if (form.ShowDialog() == DialogResult.OK)
                 {
+                    InitializeDataSource();
                 }
             }
         }
@@ -964,7 +980,7 @@ namespace PicFile_Managerment
             endAt = this.dateTimePicker2.Value.AddDays(0).Date;
             ioState = this.textBox1.Text;
             nametext = this.textBox2.Text;
-            
+
         }
         private void button1_Click_1(object sender, EventArgs e)
         {
@@ -1007,7 +1023,7 @@ namespace PicFile_Managerment
 
         private void toolStripDropDownButton3_Click(object sender, EventArgs e)
         {
-           
+
 
         }
 
@@ -1024,7 +1040,7 @@ namespace PicFile_Managerment
             if (oids.Count > 0)
             {
 
-                var form = new frmPicEdit(oids[0].ToString());
+                var form = new frmPicEdit(oids[0].ToString(), selcetitem);
 
                 if (form.ShowDialog() == DialogResult.OK)
                 {
@@ -1036,6 +1052,17 @@ namespace PicFile_Managerment
         private void 编辑属性ToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             编辑属性ToolStripMenuItem_Click(null, EventArgs.Empty);
+        }
+
+        private void toolStripDropDownButton4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 扫描ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+
         }
     }
 }

@@ -8,6 +8,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FA.Common", "FA.Common\FA.Common.csproj", "{2A43ED9F-C8E8-4329-A720-28EDCD30416A}"
 EndProject
 Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "Setup", "Setup\Setup.isproj", "{266BD9BB-AB97-4A7D-9D5C-FFE17D9F2EC1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5BC16567-C2A2-4585-8507-71BF4F5E2D42} = {5BC16567-C2A2-4585-8507-71BF4F5E2D42}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PicFile_Managerment", "PicFile_Managerment\PicFile_Managerment.csproj", "{5BC16567-C2A2-4585-8507-71BF4F5E2D42}"
 EndProject

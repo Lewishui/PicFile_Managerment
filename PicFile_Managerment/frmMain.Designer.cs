@@ -37,7 +37,6 @@
             this.编辑图片ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.编辑属性ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.toolStripDropDownButton4 = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripDropDownButton5 = new System.Windows.Forms.ToolStripDropDownButton();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -124,7 +123,6 @@
             this.toolStripDropDownButton1,
             this.toolStripDropDownButton3,
             this.toolStripDropDownButton2,
-            this.toolStripDropDownButton4,
             this.toolStripDropDownButton5});
             this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
@@ -136,10 +134,11 @@
             // toolStripDropDownButton1
             // 
             this.toolStripDropDownButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.toolStripDropDownButton1.Font = new System.Drawing.Font("微软雅黑", 11F);
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(45, 21);
-            this.toolStripDropDownButton1.Text = "新建";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(104, 24);
+            this.toolStripDropDownButton1.Text = "新建扫描(N)";
             this.toolStripDropDownButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripDropDownButton1.Click += new System.EventHandler(this.toolStripDropDownButton1_Click);
             // 
@@ -148,50 +147,45 @@
             this.toolStripDropDownButton3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.编辑图片ToolStripMenuItem1,
             this.编辑属性ToolStripMenuItem1});
+            this.toolStripDropDownButton3.Font = new System.Drawing.Font("微软雅黑", 11F);
             this.toolStripDropDownButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton3.Name = "toolStripDropDownButton3";
-            this.toolStripDropDownButton3.Size = new System.Drawing.Size(45, 21);
-            this.toolStripDropDownButton3.Text = "编辑";
+            this.toolStripDropDownButton3.Size = new System.Drawing.Size(70, 24);
+            this.toolStripDropDownButton3.Text = "编辑(E)";
             this.toolStripDropDownButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripDropDownButton3.Click += new System.EventHandler(this.toolStripDropDownButton3_Click);
             // 
             // 编辑图片ToolStripMenuItem1
             // 
             this.编辑图片ToolStripMenuItem1.Name = "编辑图片ToolStripMenuItem1";
-            this.编辑图片ToolStripMenuItem1.Size = new System.Drawing.Size(124, 22);
+            this.编辑图片ToolStripMenuItem1.Size = new System.Drawing.Size(152, 24);
             this.编辑图片ToolStripMenuItem1.Text = "编辑图片";
             this.编辑图片ToolStripMenuItem1.Click += new System.EventHandler(this.编辑图片ToolStripMenuItem1_Click);
             // 
             // 编辑属性ToolStripMenuItem1
             // 
             this.编辑属性ToolStripMenuItem1.Name = "编辑属性ToolStripMenuItem1";
-            this.编辑属性ToolStripMenuItem1.Size = new System.Drawing.Size(124, 22);
+            this.编辑属性ToolStripMenuItem1.Size = new System.Drawing.Size(152, 24);
             this.编辑属性ToolStripMenuItem1.Text = "编辑属性";
             this.编辑属性ToolStripMenuItem1.Click += new System.EventHandler(this.编辑属性ToolStripMenuItem1_Click);
             // 
             // toolStripDropDownButton2
             // 
+            this.toolStripDropDownButton2.Font = new System.Drawing.Font("微软雅黑", 11F);
             this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
-            this.toolStripDropDownButton2.Size = new System.Drawing.Size(45, 21);
-            this.toolStripDropDownButton2.Text = "下载";
+            this.toolStripDropDownButton2.Size = new System.Drawing.Size(73, 24);
+            this.toolStripDropDownButton2.Text = "下载(D)";
             this.toolStripDropDownButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripDropDownButton2.Click += new System.EventHandler(this.toolStripDropDownButton2_Click);
             // 
-            // toolStripDropDownButton4
-            // 
-            this.toolStripDropDownButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton4.Name = "toolStripDropDownButton4";
-            this.toolStripDropDownButton4.Size = new System.Drawing.Size(45, 21);
-            this.toolStripDropDownButton4.Text = "扫描";
-            this.toolStripDropDownButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
             // toolStripDropDownButton5
             // 
+            this.toolStripDropDownButton5.Font = new System.Drawing.Font("微软雅黑", 11F);
             this.toolStripDropDownButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton5.Name = "toolStripDropDownButton5";
-            this.toolStripDropDownButton5.Size = new System.Drawing.Size(45, 21);
-            this.toolStripDropDownButton5.Text = "关闭";
+            this.toolStripDropDownButton5.Size = new System.Drawing.Size(71, 24);
+            this.toolStripDropDownButton5.Text = "关闭(S)";
             this.toolStripDropDownButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripDropDownButton5.Click += new System.EventHandler(this.toolStripDropDownButton5_Click);
             // 
@@ -551,8 +545,8 @@
             this.toolStripButton1.Image = global::PicFile_Managerment.Properties.Resources.bookModiAndDeltb1;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(60, 37);
-            this.toolStripButton1.Text = "新建登记";
+            this.toolStripButton1.Size = new System.Drawing.Size(76, 37);
+            this.toolStripButton1.Text = "新建登记(C)";
             this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -627,7 +621,6 @@
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton3;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton2;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton4;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton5;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 删除ToolStripMenuItem;

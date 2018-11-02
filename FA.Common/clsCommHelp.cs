@@ -324,5 +324,64 @@ namespace FA.Common
         }
         #endregion
 
+
+        #region pic
+        public static void pdfMain(string[] args, string strFileName)
+        {
+            int ishave = 0;
+            string[] files = { @"D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\FileList\0x1024a0a0.jpg", @"D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\FileList\1.jpg" };
+            files = args;
+            iTextSharp.text.Document document = new iTextSharp.text.Document(iTextSharp.text.PageSize.A4, 25, 25, 25, 25);
+            try
+            {
+                iTextSharp.text.pdf.PdfWriter.GetInstance(document, new FileStream(strFileName, FileMode.Create, FileAccess.ReadWrite));
+                document.Open();
+                iTextSharp.text.Image image;
+               
+
+                for (int i = 0; i < files.Length; i++)
+                {
+                    if (String.IsNullOrEmpty(files[i])) break;
+
+                    if (File.Exists(files[i]))
+                        image = iTextSharp.text.Image.GetInstance(files[i]);
+                    else
+                    {
+                        
+                        continue;
+                    }
+
+                    if (image.Height > iTextSharp.text.PageSize.A4.Height - 25)
+                    {
+                        image.ScaleToFit(iTextSharp.text.PageSize.A4.Width - 25, iTextSharp.text.PageSize.A4.Height - 25);
+                    }
+                    else if (image.Width > iTextSharp.text.PageSize.A4.Width - 25)
+                    {
+                        image.ScaleToFit(iTextSharp.text.PageSize.A4.Width - 25, iTextSharp.text.PageSize.A4.Height - 25);
+                    }
+                    image.Alignment = iTextSharp.text.Image.ALIGN_MIDDLE;
+                    document.NewPage();
+                    document.Add(image);
+                    ishave++;
+
+                    //iTextSharp.text.Chunk c1 = new iTextSharp.text.Chunk("Hello World");
+                    //iTextSharp.text.Phrase p1 = new iTextSharp.text.Phrase();
+                    //p1.Leading = 150;      //行间距
+                    //document.Add(p1);
+                }
+                Console.WriteLine("转换成功！");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("转换失败，原因：" + ex.Message);
+            }
+            if (ishave != 0)
+                document.Close();
+            //Console.ReadKey();
+        }
+        #endregion
+
+
+
     }
 }

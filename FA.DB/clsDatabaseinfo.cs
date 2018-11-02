@@ -62,7 +62,14 @@ namespace FA.DB
         public string beizhu { get; set; }
         public string NodeID { get; set; }
      
-
+        //备注
+        public string beizhu1 { get; set; }
+        public string beizhu2 { get; set; }
+        public string beizhu3 { get; set; }
+        public string beizhu4 { get; set; }
+        public string beizhu5 { get; set; }
+     
+     
     }
     public class clsAccFileinfo
     {

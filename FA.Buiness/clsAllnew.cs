@@ -158,7 +158,7 @@ namespace FA.Buiness
                 {
 
                     string sql = "";
-                    sql = "insert into File_Managerment(wenjianbiaohao,biaoti,wenhao,zhiwendanwei,xingwendanwei,dengjiriqi,miji,wenjianleibie,yeshu,fenshu,accfile_id,beizhu,NodeID,wenjianqiriqi,wenjianzhiriqi,baoguanqixian) values ('" + item.wenjianbiaohao + "','" + item.biaoti + "',N'" + item.wenhao + "','" + item.zhiwendanwei + "','" + item.xingwendanwei + "','" + item.dengjiriqi + "','" + item.miji + "','" + item.wenjianleibie + "',N'" + item.yeshu + "',N'" + item.fenshu + "',N'" + item.accfile_id + "',N'" + item.beizhu + "',N'" + item.NodeID + "','" + item.wenjianqiriqi + "','" + item.wenjianzhiriqi + "','" + item.baoguanqixian + "')";
+                    sql = "insert into File_Managerment(wenjianbiaohao,biaoti,wenhao,zhiwendanwei,xingwendanwei,dengjiriqi,miji,wenjianleibie,yeshu,fenshu,accfile_id,beizhu,NodeID,wenjianqiriqi,wenjianzhiriqi,baoguanqixian,beizhu1,beizhu2,beizhu3,beizhu4,beizhu5) values ('" + item.wenjianbiaohao + "','" + item.biaoti + "',N'" + item.wenhao + "','" + item.zhiwendanwei + "','" + item.xingwendanwei + "','" + item.dengjiriqi + "','" + item.miji + "','" + item.wenjianleibie + "',N'" + item.yeshu + "',N'" + item.fenshu + "',N'" + item.accfile_id + "',N'" + item.beizhu + "',N'" + item.NodeID + "','" + item.wenjianqiriqi + "','" + item.baoguanqixian + "','" + item.beizhu1 + "','" + item.beizhu2 + "','" + item.beizhu3 + "','" + item.beizhu4 + "','" + item.beizhu5 + "')";
 
                     OleDbCommand cmd = new OleDbCommand(sql, con);
                     cmd.ExecuteNonQuery();
@@ -260,6 +260,27 @@ namespace FA.Buiness
                     {
                         conditions += " ,baoguanqixian ='" + item.baoguanqixian + "'";
                     }
+                    if (item.beizhu1 != null)
+                    {
+                        conditions += " ,beizhu1 ='" + item.beizhu1 + "'";
+                    }
+                    if (item.beizhu2 != null)
+                    {
+                        conditions += " ,beizhu2 ='" + item.beizhu2 + "'";
+                    }
+                    if (item.beizhu3 != null)
+                    {
+                        conditions += " ,beizhu3 ='" + item.beizhu3 + "'";
+                    }
+                    if (item.beizhu4 != null)
+                    {
+                        conditions += " ,beizhu4 ='" + item.beizhu4 + "'";
+                    }
+                    if (item.beizhu5 != null)
+                    {
+                        conditions += " ,beizhu5 ='" + item.beizhu5 + "'";
+                    }
+
                     conditions = "update File_Managerment set  " + conditions + " where T_id = " + item.T_id + " ";
                     sql = conditions;
 
@@ -450,10 +471,26 @@ namespace FA.Buiness
                     if (emp["wenjianqiriqi"].ToString() != "")
                         tempnote.wenjianqiriqi = emp["wenjianqiriqi"].ToString();
 
-                    if (emp["wenjianzhiriqi"].ToString() != "")
-                        tempnote.wenjianzhiriqi = emp["wenjianzhiriqi"].ToString();
                     if (emp["baoguanqixian"].ToString() != "")
                         tempnote.baoguanqixian = emp["baoguanqixian"].ToString();
+
+
+                    if (emp["beizhu1"].ToString() != "")
+                        tempnote.beizhu1 = emp["beizhu1"].ToString();
+               
+                    if (emp["beizhu2"].ToString() != "")
+                        tempnote.beizhu1 = emp["beizhu2"].ToString();
+
+                    if (emp["beizhu3"].ToString() != "")
+                        tempnote.beizhu1 = emp["beizhu3"].ToString();
+
+                    if (emp["beizhu4"].ToString() != "")
+                        tempnote.beizhu1 = emp["beizhu4"].ToString();
+
+                    if (emp["beizhu5"].ToString() != "")
+                        tempnote.baoguanqixian = emp["beizhu5"].ToString();
+
+                
 
                     dailyResult.Add(tempnote);
 
@@ -670,6 +707,9 @@ namespace FA.Buiness
             fa.Close();
             MessageBox.Show("下载完成 ！", "System", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+    
+
 
     }
 }

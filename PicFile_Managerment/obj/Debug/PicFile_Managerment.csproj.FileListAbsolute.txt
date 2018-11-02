@@ -53,3 +53,41 @@ D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\obj\Debug\Pic
 D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\obj\Debug\PicFile_Managerment.csproj.GenerateResource.Cache
 D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\obj\Debug\PicFile_Managerment.exe
 D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\obj\Debug\PicFile_Managerment.pdb
+D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\PicFile_Managerment.exe.config
+D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\obj\Debug\PicFile_Managerment.exe
+D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\obj\Debug\PicFile_Managerment.pdb
+D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\App.config
+D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\PicFile_Managerment.exe
+D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\PicFile_Managerment.pdb
+D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\FA.Buiness.dll
+D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\FA.Common.dll
+D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\FA.DB.dll
+D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\ImageClassLib.dll
+D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\IrisSkin2.dll
+D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\log4net.dll
+D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\ThoughtWorks.QRCode.dll
+D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\MySql.Data.dll
+D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\FA.Buiness.pdb
+D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\FA.Common.pdb
+D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\FA.DB.pdb
+D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\ImageClassLib.pdb
+D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\obj\Debug\PicFile_Managerment.csprojResolveAssemblyReference.cache
+D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\obj\Debug\PicFile_Managerment.frmAboutBox.resources
+D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\obj\Debug\PicFile_Managerment.frmCut2.resources
+D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\obj\Debug\PicFile_Managerment.frmCutImage.resources
+D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\obj\Debug\PicFile_Managerment.frmLogin.resources
+D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\obj\Debug\PicFile_Managerment.frmMain.resources
+D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\obj\Debug\PicFile_Managerment.frmMessageShow.resources
+D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\obj\Debug\PicFile_Managerment.frmNewCreate.resources
+D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\obj\Debug\PicFile_Managerment.frmPicAdjust.resources
+D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\obj\Debug\PicFile_Managerment.frmPicEdit.resources
+D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\obj\Debug\PicFile_Managerment.frmSlide.resources
+D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\obj\Debug\PicFile_Managerment.frmSpecialEfficacy.resources
+D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\obj\Debug\PicFile_Managerment.frmWater.resources
+D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\obj\Debug\PicFile_Managerment.Properties.Resources.resources
+D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\obj\Debug\PicFile_Managerment.csproj.GenerateResource.Cache
+D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\itextsharp.dll
+D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\obj\Debug\PicFile_Managerment.frmAutoScan.resources
+D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\obj\Debug\PicFile_Managerment.frmScanMain.resources
+D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\Interop.WIA.dll

@@ -339,25 +339,32 @@
 		<col def="S0">ISDotNetInstallerArgsCommit</col>
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
-		<row><td>BJ_FAautomaion.vshost.exe</td><td>{2C9B6E8B-D564-4496-A404-56B2DF954485}</td><td>INSTALLDIR</td><td>2</td><td/><td>bj_faautomaion.vshost.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>FA.Buiness.dll</td><td>{3A222081-1238-4AE2-9C89-E7311134BA28}</td><td>INSTALLDIR</td><td>2</td><td/><td>fa.buiness.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>FA.Common.dll</td><td>{024B696D-96F2-48E2-984D-67B7E94227BC}</td><td>INSTALLDIR</td><td>2</td><td/><td>fa.common.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>FA.DB.dll</td><td>{AF2296A5-E6B2-424E-BAB3-92364B82F617}</td><td>INSTALLDIR</td><td>2</td><td/><td>fa.db.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>BJ_FAautomaion.vshost.exe</td><td>{4090DED2-BE88-4C84-A7BC-63DB9C621AD9}</td><td>INSTALLDIR</td><td>2</td><td/><td>bj_faautomaion.vshost.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Component</td><td>{F63A995F-97D9-4391-8173-A3C95FBBE2E8}</td><td>INSTALLDIR</td><td>2</td><td/><td>File</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>FA.Buiness.dll</td><td>{116DF435-FAEC-4E0E-97BD-0ADD4720CBCC}</td><td>INSTALLDIR</td><td>2</td><td/><td>fa.buiness.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>FA.Common.dll</td><td>{7A5C2D78-4450-453F-9303-CB4B675A99B4}</td><td>INSTALLDIR</td><td>2</td><td/><td>fa.common.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>FA.DB.dll</td><td>{6AF11C8C-083A-48E6-BAF4-8EC7B36E4B14}</td><td>INSTALLDIR</td><td>2</td><td/><td>fa.db.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{DA9A9211-198C-467B-A7DA-9200A01D67B5}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT1</td><td>{9C2A4B97-60AB-4A70-90AF-4A60401EC28F}</td><td>DATA</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT2</td><td>{20835E47-245C-4184-81C9-E1FE1AF514EB}</td><td>IMAGES</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT3</td><td>{A9EC0C38-004E-4D7E-B343-94E9C61152DA}</td><td>LOCATION_1</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT4</td><td>{CE72B343-BBB9-446B-A373-F8AD6EC1D2DC}</td><td>FILELIST</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT5</td><td>{7295F1B6-A573-44C5-9BBC-BD0B2C5E6C7D}</td><td>RESOURCES</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ImageClassLib.dll</td><td>{0690C117-FE81-448E-A743-6DFFEE16828B}</td><td>INSTALLDIR</td><td>2</td><td/><td>imageclasslib.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>IrisSkin2.dll</td><td>{CE3F5E32-819D-47D9-B3A8-F4312673E6F6}</td><td>INSTALLDIR</td><td>2</td><td/><td>irisskin2.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>MySql.Data.dll</td><td>{85113826-BC71-4808-99B8-7A4DFCE14B9B}</td><td>INSTALLDIR</td><td>2</td><td/><td>mysql.data.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT1</td><td>{CC2EEBBF-4F89-4D04-8525-898253683061}</td><td>DATA</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT2</td><td>{5BA9AE15-1E33-4563-9CAF-1C3CFBBDAFEE}</td><td>IMAGES</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT3</td><td>{954D09E1-4231-45F2-9E2B-997E6B148766}</td><td>LOCATION_1</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT4</td><td>{6A884D41-3FF1-472D-957D-0E1C03286EF9}</td><td>_349865000</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT5</td><td>{02D0EDC5-CEE7-4B53-94FD-68C72CB8C6CA}</td><td>_079186000</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT6</td><td>{34A0D8DE-3367-42EF-ABD6-21D9787B9E28}</td><td>_954803000</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT7</td><td>{E5369F2F-D143-46FF-BD6C-A30C30C7033A}</td><td>_068314000</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT8</td><td>{5F8FBD45-7EE4-4D17-866D-F6A822B94E0F}</td><td>FILELIST</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT9</td><td>{2BF779AA-ECEC-482C-9FD7-0B48F68561FF}</td><td>RESOURCES</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ImageClassLib.dll</td><td>{88E58594-12A3-4F16-B972-EE733873899B}</td><td>INSTALLDIR</td><td>2</td><td/><td>imageclasslib.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Interop.WIA.dll</td><td>{D6109A25-4DB6-4C24-AB42-07A75572CDC1}</td><td>INSTALLDIR</td><td>2</td><td/><td>interop.wia.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>IrisSkin2.dll</td><td>{AE8C81BE-BA66-4351-94A4-A3A8064BC2FB}</td><td>INSTALLDIR</td><td>2</td><td/><td>irisskin2.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>MySql.Data.dll</td><td>{C38BE150-2179-4982-B507-DDAC39FA4EF4}</td><td>INSTALLDIR</td><td>2</td><td/><td>mysql.data.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>NewComponent1</td><td>{D33F3899-1075-4B25-BEB8-BA4E527F94EA}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>PicFile_Managerment.exe</td><td>{2CE1D851-3DCD-43AD-837A-8BC4D826F8E3}</td><td>INSTALLDIR</td><td>2</td><td/><td>picfile_managerment.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>PicFile_Managerment.vshost.exe</td><td>{8B2FBE08-E091-4024-BA26-DFBAFA119D24}</td><td>INSTALLDIR</td><td>2</td><td/><td>picfile_managerment.vshost.e</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ThoughtWorks.QRCode.dll</td><td>{0A03A286-F429-41DC-9E34-58D7216504F6}</td><td>INSTALLDIR</td><td>2</td><td/><td>thoughtworks.qrcode.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>WeifenLuo.WinFormsUI.Docking.dll</td><td>{7120D3EE-E3F7-4B5B-9C01-B6DDF7A240F1}</td><td>INSTALLDIR</td><td>2</td><td/><td>weifenluo.winformsui.docking</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>log4net.dll</td><td>{A0CA1B30-F53A-4EFB-B61B-6E40ED3EB4C0}</td><td>INSTALLDIR</td><td>2</td><td/><td>log4net.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>PicFile_Managerment.exe</td><td>{D9D9E218-88D9-4E3A-860A-FE01C47A9C85}</td><td>INSTALLDIR</td><td>2</td><td/><td>picfile_managerment.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>PicFile_Managerment.vshost.exe</td><td>{F98B55E6-75FC-4353-B607-4DB6A96E3468}</td><td>INSTALLDIR</td><td>2</td><td/><td>picfile_managerment.vshost.e</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ThoughtWorks.QRCode.dll</td><td>{4210B8DA-E56F-4E07-B7E8-B810E52421DA}</td><td>INSTALLDIR</td><td>2</td><td/><td>thoughtworks.qrcode.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>WeifenLuo.WinFormsUI.Docking.dll</td><td>{41A7CB93-C176-4FAC-B006-3E3F44C6E90A}</td><td>INSTALLDIR</td><td>2</td><td/><td>weifenluo.winformsui.docking</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>itextsharp.dll</td><td>{E8DA63BA-A9D9-451D-A846-1C6EE2A6D8CD}</td><td>INSTALLDIR</td><td>2</td><td/><td>itextsharp.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>log4net.dll</td><td>{71EE7A6D-A5EC-49BF-BB20-1BA75FFC014A}</td><td>INSTALLDIR</td><td>2</td><td/><td>log4net.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
 	<table name="Condition">
@@ -1070,7 +1077,7 @@
 		<row><td>IMAGES</td><td>ISX_DEFAULTCOMPONENT2</td></row>
 		<row><td>INSTALLDIR</td><td>NewComponent1</td></row>
 		<row><td>LOCATION_1</td><td>ISX_DEFAULTCOMPONENT3</td></row>
-		<row><td>RESOURCES</td><td>ISX_DEFAULTCOMPONENT5</td></row>
+		<row><td>RESOURCES</td><td>ISX_DEFAULTCOMPONENT9</td></row>
 	</table>
 
 	<table name="CustomAction">
@@ -1192,6 +1199,10 @@
 		<row><td>USERPROFILE</td><td>TARGETDIR</td><td>.:USERPR~1|UserProfile</td><td/><td>0</td><td/></row>
 		<row><td>WindowsFolder</td><td>TARGETDIR</td><td>.:Windows</td><td/><td>0</td><td/></row>
 		<row><td>WindowsVolume</td><td>TARGETDIR</td><td>.:WinRoot</td><td/><td>0</td><td/></row>
+		<row><td>_068314000</td><td>LOCATION_1</td><td>906831~1|9068314000</td><td/><td>0</td><td/></row>
+		<row><td>_079186000</td><td>LOCATION_1</td><td>507918~1|5079186000</td><td/><td>0</td><td/></row>
+		<row><td>_349865000</td><td>LOCATION_1</td><td>234986~1|2349865000</td><td/><td>0</td><td/></row>
+		<row><td>_954803000</td><td>LOCATION_1</td><td>795480~1|7954803000</td><td/><td>0</td><td/></row>
 		<row><td>faauto_1_fa_auto</td><td>yh</td><td>FAAUTO~1|FA Auto</td><td/><td>1</td><td/></row>
 		<row><td>yh</td><td>ProgramMenuFolder</td><td>YH</td><td/><td>1</td><td/></row>
 	</table>
@@ -1886,6 +1897,7 @@
 		<col key="yes" def="s38">Feature_</col>
 		<col key="yes" def="s72">Component_</col>
 		<row><td>AlwaysInstall</td><td>BJ_FAautomaion.vshost.exe</td></row>
+		<row><td>AlwaysInstall</td><td>Component</td></row>
 		<row><td>AlwaysInstall</td><td>FA.Buiness.dll</td></row>
 		<row><td>AlwaysInstall</td><td>FA.Common.dll</td></row>
 		<row><td>AlwaysInstall</td><td>FA.DB.dll</td></row>
@@ -1895,7 +1907,12 @@
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT3</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT4</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT5</td></row>
+		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT6</td></row>
+		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT7</td></row>
+		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT8</td></row>
+		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT9</td></row>
 		<row><td>AlwaysInstall</td><td>ImageClassLib.dll</td></row>
+		<row><td>AlwaysInstall</td><td>Interop.WIA.dll</td></row>
 		<row><td>AlwaysInstall</td><td>IrisSkin2.dll</td></row>
 		<row><td>AlwaysInstall</td><td>MySql.Data.dll</td></row>
 		<row><td>AlwaysInstall</td><td>NewComponent1</td></row>
@@ -1903,6 +1920,7 @@
 		<row><td>AlwaysInstall</td><td>PicFile_Managerment.vshost.exe</td></row>
 		<row><td>AlwaysInstall</td><td>ThoughtWorks.QRCode.dll</td></row>
 		<row><td>AlwaysInstall</td><td>WeifenLuo.WinFormsUI.Docking.dll</td></row>
+		<row><td>AlwaysInstall</td><td>itextsharp.dll</td></row>
 		<row><td>AlwaysInstall</td><td>log4net.dll</td></row>
 	</table>
 
@@ -1918,44 +1936,54 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I4">ISAttributes</col>
 		<col def="S72">ISComponentSubFolder_</col>
-		<row><td>_.jpg</td><td>ISX_DEFAULTCOMPONENT4</td><td>1.jpg</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\FileList\1.jpg</td><td>1</td><td/></row>
-		<row><td>_x1024a0a0.jpg</td><td>ISX_DEFAULTCOMPONENT4</td><td>0X1024~1.JPG|0x1024a0a0.jpg</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\FileList\0x1024a0a0.jpg</td><td>1</td><td/></row>
-		<row><td>animatedgifencoder.cs</td><td>ISX_DEFAULTCOMPONENT</td><td>ANIMAT~1.CS|AnimatedGifEncoder.cs</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\AnimatedGifEncoder.cs</td><td>1</td><td/></row>
-		<row><td>app.config</td><td>ISX_DEFAULTCOMPONENT</td><td>APP~1.CON|App.config</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\App.config</td><td>1</td><td/></row>
-		<row><td>bj_faautomaion.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>BJ_FAA~1.PDB|BJ_FAautomaion.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\BJ_FAautomaion.pdb</td><td>1</td><td/></row>
-		<row><td>bj_faautomaion.vshost.exe</td><td>BJ_FAautomaion.vshost.exe</td><td>BJ_FAA~1.EXE|BJ_FAautomaion.vshost.exe</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\BJ_FAautomaion.vshost.exe</td><td>1</td><td/></row>
-		<row><td>bj_faautomaion.vshost.exe.co</td><td>ISX_DEFAULTCOMPONENT</td><td>BJ_FAA~1.CON|BJ_FAautomaion.vshost.exe.config</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\BJ_FAautomaion.vshost.exe.config</td><td>1</td><td/></row>
-		<row><td>bj_faautomaion.vshost.exe.ma</td><td>ISX_DEFAULTCOMPONENT</td><td>BJ_FAA~1.MAN|BJ_FAautomaion.vshost.exe.manifest</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\BJ_FAautomaion.vshost.exe.manifest</td><td>1</td><td/></row>
-		<row><td>fa.buiness.dll</td><td>FA.Buiness.dll</td><td>FABUIN~1.DLL|FA.Buiness.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\FA.Buiness.dll</td><td>1</td><td/></row>
-		<row><td>fa.buiness.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>FABUIN~1.PDB|FA.Buiness.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\FA.Buiness.pdb</td><td>1</td><td/></row>
-		<row><td>fa.common.dll</td><td>FA.Common.dll</td><td>FACOMM~1.DLL|FA.Common.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\FA.Common.dll</td><td>1</td><td/></row>
-		<row><td>fa.common.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>FACOMM~1.PDB|FA.Common.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\FA.Common.pdb</td><td>1</td><td/></row>
-		<row><td>fa.db.dll</td><td>FA.DB.dll</td><td>FADB~1.DLL|FA.DB.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\FA.DB.dll</td><td>1</td><td/></row>
-		<row><td>fa.db.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>FADB~1.PDB|FA.DB.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\FA.DB.pdb</td><td>1</td><td/></row>
-		<row><td>forward.bmp</td><td>ISX_DEFAULTCOMPONENT4</td><td>Forward.bmp</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\FileList\Forward.bmp</td><td>1</td><td/></row>
-		<row><td>gifdecoder.cs</td><td>ISX_DEFAULTCOMPONENT</td><td>GIFDEC~1.CS|GifDecoder.cs</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\GifDecoder.cs</td><td>1</td><td/></row>
-		<row><td>glassorange.ssk</td><td>ISX_DEFAULTCOMPONENT</td><td>GLASSO~1.SSK|GlassOrange.ssk</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\GlassOrange.ssk</td><td>1</td><td/></row>
-		<row><td>hall.ico</td><td>ISX_DEFAULTCOMPONENT4</td><td>Hall.ico</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\FileList\Hall.ico</td><td>1</td><td/></row>
-		<row><td>hall.jpg</td><td>ISX_DEFAULTCOMPONENT4</td><td>Hall.jpg</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\FileList\Hall.jpg</td><td>1</td><td/></row>
-		<row><td>imageclasslib.dll</td><td>ImageClassLib.dll</td><td>IMAGEC~1.DLL|ImageClassLib.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\ImageClassLib.dll</td><td>1</td><td/></row>
-		<row><td>imageclasslib.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>IMAGEC~1.PDB|ImageClassLib.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\ImageClassLib.pdb</td><td>1</td><td/></row>
-		<row><td>irisskin2.dll</td><td>IrisSkin2.dll</td><td>IRISSK~1.DLL|IrisSkin2.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\IrisSkin2.dll</td><td>1</td><td/></row>
-		<row><td>log4net.dll</td><td>log4net.dll</td><td>log4net.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\log4net.dll</td><td>1</td><td/></row>
-		<row><td>lzwencoder.cs</td><td>ISX_DEFAULTCOMPONENT</td><td>LZWENC~1.CS|LZWEncoder.cs</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\LZWEncoder.cs</td><td>1</td><td/></row>
-		<row><td>mysql.data.dll</td><td>MySql.Data.dll</td><td>MYSQLD~1.DLL|MySql.Data.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\MySql.Data.dll</td><td>1</td><td/></row>
-		<row><td>neuquant.cs</td><td>ISX_DEFAULTCOMPONENT</td><td>NeuQuant.cs</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\NeuQuant.cs</td><td>1</td><td/></row>
-		<row><td>newfolder.bmp</td><td>ISX_DEFAULTCOMPONENT4</td><td>NEWFOL~1.BMP|NewFolder.bmp</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\FileList\NewFolder.bmp</td><td>1</td><td/></row>
-		<row><td>picfile_managerment.exe</td><td>PicFile_Managerment.exe</td><td>PICFIL~1.EXE|PicFile_Managerment.exe</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\PicFile_Managerment.exe</td><td>1</td><td/></row>
-		<row><td>picfile_managerment.exe.conf</td><td>ISX_DEFAULTCOMPONENT</td><td>PICFIL~1.CON|PicFile_Managerment.exe.config</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\PicFile_Managerment.exe.config</td><td>1</td><td/></row>
-		<row><td>picfile_managerment.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>PICFIL~1.PDB|PicFile_Managerment.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\PicFile_Managerment.pdb</td><td>1</td><td/></row>
-		<row><td>picfile_managerment.vshost.e</td><td>PicFile_Managerment.vshost.exe</td><td>PICFIL~1.EXE|PicFile_Managerment.vshost.exe</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\PicFile_Managerment.vshost.exe</td><td>1</td><td/></row>
-		<row><td>picfile_managerment.vshost.e1</td><td>ISX_DEFAULTCOMPONENT</td><td>PICFIL~1.CON|PicFile_Managerment.vshost.exe.config</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\PicFile_Managerment.vshost.exe.config</td><td>1</td><td/></row>
-		<row><td>picfile_managerment.vshost.e2</td><td>ISX_DEFAULTCOMPONENT</td><td>PICFIL~1.MAN|PicFile_Managerment.vshost.exe.manifest</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\PicFile_Managerment.vshost.exe.manifest</td><td>1</td><td/></row>
-		<row><td>thoughtworks.qrcode.dll</td><td>ThoughtWorks.QRCode.dll</td><td>THOUGH~1.DLL|ThoughtWorks.QRCode.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\ThoughtWorks.QRCode.dll</td><td>1</td><td/></row>
-		<row><td>transparent.cs</td><td>ISX_DEFAULTCOMPONENT</td><td>TRANSP~1.CS|transparent.cs</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\transparent.cs</td><td>1</td><td/></row>
-		<row><td>up.bmp</td><td>ISX_DEFAULTCOMPONENT4</td><td>Up.bmp</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\FileList\Up.bmp</td><td>1</td><td/></row>
-		<row><td>wblue.ssk</td><td>ISX_DEFAULTCOMPONENT</td><td>WBlue.ssk</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\WBlue.ssk</td><td>1</td><td/></row>
-		<row><td>weifenluo.winformsui.docking</td><td>WeifenLuo.WinFormsUI.Docking.dll</td><td>WEIFEN~1.DLL|WeifenLuo.WinFormsUI.Docking.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll</td><td>1</td><td/></row>
+		<row><td>File</td><td>Component</td><td>PicFile_Managerment.主输出</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;PicFile_Managerment&gt;|Built</td><td>3</td><td/></row>
+		<row><td>_.jpg</td><td>ISX_DEFAULTCOMPONENT5</td><td>1.jpg</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\data\images\location_1\5079186000\1.jpg</td><td>1</td><td/></row>
+		<row><td>_.jpg1</td><td>ISX_DEFAULTCOMPONENT6</td><td>1.jpg</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\data\images\location_1\7954803000\1.jpg</td><td>1</td><td/></row>
+		<row><td>_.jpg2</td><td>ISX_DEFAULTCOMPONENT7</td><td>1.jpg</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\data\images\location_1\9068314000\1.jpg</td><td>1</td><td/></row>
+		<row><td>_.jpg3</td><td>ISX_DEFAULTCOMPONENT8</td><td>1.jpg</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\FileList\1.jpg</td><td>1</td><td/></row>
+		<row><td>_x1024a0a0.jpg</td><td>ISX_DEFAULTCOMPONENT4</td><td>0X1024~1.JPG|0x1024a0a0.jpg</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\data\images\location_1\2349865000\0x1024a0a0.jpg</td><td>1</td><td/></row>
+		<row><td>_x1024a0a0.jpg1</td><td>ISX_DEFAULTCOMPONENT5</td><td>0X1024~1.JPG|0x1024a0a0.jpg</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\data\images\location_1\5079186000\0x1024a0a0.jpg</td><td>1</td><td/></row>
+		<row><td>_x1024a0a0.jpg2</td><td>ISX_DEFAULTCOMPONENT7</td><td>0X1024~1.JPG|0x1024a0a0.jpg</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\data\images\location_1\9068314000\0x1024a0a0.jpg</td><td>1</td><td/></row>
+		<row><td>_x1024a0a0.jpg3</td><td>ISX_DEFAULTCOMPONENT8</td><td>0X1024~1.JPG|0x1024a0a0.jpg</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\FileList\0x1024a0a0.jpg</td><td>1</td><td/></row>
+		<row><td>animatedgifencoder.cs</td><td>ISX_DEFAULTCOMPONENT</td><td>ANIMAT~1.CS|AnimatedGifEncoder.cs</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\AnimatedGifEncoder.cs</td><td>1</td><td/></row>
+		<row><td>app.config</td><td>ISX_DEFAULTCOMPONENT</td><td>APP~1.CON|App.config</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\App.config</td><td>1</td><td/></row>
+		<row><td>bj_faautomaion.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>BJ_FAA~1.PDB|BJ_FAautomaion.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\BJ_FAautomaion.pdb</td><td>1</td><td/></row>
+		<row><td>bj_faautomaion.vshost.exe</td><td>BJ_FAautomaion.vshost.exe</td><td>BJ_FAA~1.EXE|BJ_FAautomaion.vshost.exe</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\BJ_FAautomaion.vshost.exe</td><td>1</td><td/></row>
+		<row><td>bj_faautomaion.vshost.exe.co</td><td>ISX_DEFAULTCOMPONENT</td><td>BJ_FAA~1.CON|BJ_FAautomaion.vshost.exe.config</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\BJ_FAautomaion.vshost.exe.config</td><td>1</td><td/></row>
+		<row><td>bj_faautomaion.vshost.exe.ma</td><td>ISX_DEFAULTCOMPONENT</td><td>BJ_FAA~1.MAN|BJ_FAautomaion.vshost.exe.manifest</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\BJ_FAautomaion.vshost.exe.manifest</td><td>1</td><td/></row>
+		<row><td>fa.buiness.dll</td><td>FA.Buiness.dll</td><td>FABUIN~1.DLL|FA.Buiness.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\FA.Buiness.dll</td><td>1</td><td/></row>
+		<row><td>fa.buiness.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>FABUIN~1.PDB|FA.Buiness.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\FA.Buiness.pdb</td><td>1</td><td/></row>
+		<row><td>fa.common.dll</td><td>FA.Common.dll</td><td>FACOMM~1.DLL|FA.Common.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\FA.Common.dll</td><td>1</td><td/></row>
+		<row><td>fa.common.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>FACOMM~1.PDB|FA.Common.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\FA.Common.pdb</td><td>1</td><td/></row>
+		<row><td>fa.db.dll</td><td>FA.DB.dll</td><td>FADB~1.DLL|FA.DB.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\FA.DB.dll</td><td>1</td><td/></row>
+		<row><td>fa.db.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>FADB~1.PDB|FA.DB.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\FA.DB.pdb</td><td>1</td><td/></row>
+		<row><td>forward.bmp</td><td>ISX_DEFAULTCOMPONENT8</td><td>Forward.bmp</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\FileList\Forward.bmp</td><td>1</td><td/></row>
+		<row><td>gifdecoder.cs</td><td>ISX_DEFAULTCOMPONENT</td><td>GIFDEC~1.CS|GifDecoder.cs</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\GifDecoder.cs</td><td>1</td><td/></row>
+		<row><td>glassorange.ssk</td><td>ISX_DEFAULTCOMPONENT</td><td>GLASSO~1.SSK|GlassOrange.ssk</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\GlassOrange.ssk</td><td>1</td><td/></row>
+		<row><td>hall.ico</td><td>ISX_DEFAULTCOMPONENT8</td><td>Hall.ico</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\FileList\Hall.ico</td><td>1</td><td/></row>
+		<row><td>hall.jpg</td><td>ISX_DEFAULTCOMPONENT7</td><td>Hall.jpg</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\data\images\location_1\9068314000\Hall.jpg</td><td>1</td><td/></row>
+		<row><td>hall.jpg1</td><td>ISX_DEFAULTCOMPONENT8</td><td>Hall.jpg</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\FileList\Hall.jpg</td><td>1</td><td/></row>
+		<row><td>imageclasslib.dll</td><td>ImageClassLib.dll</td><td>IMAGEC~1.DLL|ImageClassLib.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\ImageClassLib.dll</td><td>1</td><td/></row>
+		<row><td>imageclasslib.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>IMAGEC~1.PDB|ImageClassLib.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\ImageClassLib.pdb</td><td>1</td><td/></row>
+		<row><td>interop.wia.dll</td><td>Interop.WIA.dll</td><td>INTERO~1.DLL|Interop.WIA.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\Interop.WIA.dll</td><td>1</td><td/></row>
+		<row><td>irisskin2.dll</td><td>IrisSkin2.dll</td><td>IRISSK~1.DLL|IrisSkin2.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\IrisSkin2.dll</td><td>1</td><td/></row>
+		<row><td>itextsharp.dll</td><td>itextsharp.dll</td><td>ITEXTS~1.DLL|itextsharp.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\itextsharp.dll</td><td>1</td><td/></row>
+		<row><td>log4net.dll</td><td>log4net.dll</td><td>log4net.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\log4net.dll</td><td>1</td><td/></row>
+		<row><td>lzwencoder.cs</td><td>ISX_DEFAULTCOMPONENT</td><td>LZWENC~1.CS|LZWEncoder.cs</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\LZWEncoder.cs</td><td>1</td><td/></row>
+		<row><td>mysql.data.dll</td><td>MySql.Data.dll</td><td>MYSQLD~1.DLL|MySql.Data.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\MySql.Data.dll</td><td>1</td><td/></row>
+		<row><td>neuquant.cs</td><td>ISX_DEFAULTCOMPONENT</td><td>NeuQuant.cs</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\NeuQuant.cs</td><td>1</td><td/></row>
+		<row><td>newfolder.bmp</td><td>ISX_DEFAULTCOMPONENT8</td><td>NEWFOL~1.BMP|NewFolder.bmp</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\FileList\NewFolder.bmp</td><td>1</td><td/></row>
+		<row><td>picfile_managerment.exe</td><td>PicFile_Managerment.exe</td><td>PICFIL~1.EXE|PicFile_Managerment.exe</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\PicFile_Managerment.exe</td><td>1</td><td/></row>
+		<row><td>picfile_managerment.exe.conf</td><td>ISX_DEFAULTCOMPONENT</td><td>PICFIL~1.CON|PicFile_Managerment.exe.config</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\PicFile_Managerment.exe.config</td><td>1</td><td/></row>
+		<row><td>picfile_managerment.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>PICFIL~1.PDB|PicFile_Managerment.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\PicFile_Managerment.pdb</td><td>1</td><td/></row>
+		<row><td>picfile_managerment.vshost.e</td><td>PicFile_Managerment.vshost.exe</td><td>PICFIL~1.EXE|PicFile_Managerment.vshost.exe</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\PicFile_Managerment.vshost.exe</td><td>1</td><td/></row>
+		<row><td>picfile_managerment.vshost.e1</td><td>ISX_DEFAULTCOMPONENT</td><td>PICFIL~1.CON|PicFile_Managerment.vshost.exe.config</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\PicFile_Managerment.vshost.exe.config</td><td>1</td><td/></row>
+		<row><td>picfile_managerment.vshost.e2</td><td>ISX_DEFAULTCOMPONENT</td><td>PICFIL~1.MAN|PicFile_Managerment.vshost.exe.manifest</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\PicFile_Managerment.vshost.exe.manifest</td><td>1</td><td/></row>
+		<row><td>thoughtworks.qrcode.dll</td><td>ThoughtWorks.QRCode.dll</td><td>THOUGH~1.DLL|ThoughtWorks.QRCode.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\ThoughtWorks.QRCode.dll</td><td>1</td><td/></row>
+		<row><td>transparent.cs</td><td>ISX_DEFAULTCOMPONENT</td><td>TRANSP~1.CS|transparent.cs</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\transparent.cs</td><td>1</td><td/></row>
+		<row><td>up.bmp</td><td>ISX_DEFAULTCOMPONENT8</td><td>Up.bmp</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\FileList\Up.bmp</td><td>1</td><td/></row>
+		<row><td>wblue.ssk</td><td>ISX_DEFAULTCOMPONENT</td><td>WBlue.ssk</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\WBlue.ssk</td><td>1</td><td/></row>
+		<row><td>weifenluo.winformsui.docking</td><td>WeifenLuo.WinFormsUI.Docking.dll</td><td>WEIFEN~1.DLL|WeifenLuo.WinFormsUI.Docking.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll</td><td>1</td><td/></row>
 	</table>
 
 	<table name="FileSFPCatalog">
@@ -2211,25 +2239,32 @@
 		<col def="S0">FTPLocation</col>
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
-		<row><td>BJ_FAautomaion.vshost.exe</td><td/><td/><td>_67DDBB30_1862_4AE0_85D5_80CB4B664A93_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>FA.Buiness.dll</td><td/><td/><td>_FC685707_6AB9_43D7_A967_1074D16C824A_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>FA.Common.dll</td><td/><td/><td>_2C03399C_0E4E_4112_B50C_86655E035FEE_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>FA.DB.dll</td><td/><td/><td>_50CDF51F_BEC6_42DD_8093_2CAF7440A78C_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>BJ_FAautomaion.vshost.exe</td><td/><td/><td>_A7C1624E_FE38_4D4C_85E8_5BA7F27C98F7_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Component</td><td/><td/><td>_71A8E50C_852A_4839_8858_EBC4F86DD9AE_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>FA.Buiness.dll</td><td/><td/><td>_86C0778A_C0E3_405B_AD3A_83476B474C55_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>FA.Common.dll</td><td/><td/><td>_DBBAE97D_FCA2_48B8_976F_44DA6EBDE7CC_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>FA.DB.dll</td><td/><td/><td>_5EED0190_29FB_4B38_992C_D970C7A889DC_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_9054DACE_B656_49ED_A78E_B980AC89ED85_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT1</td><td/><td/><td>_876ACDFA_B4C1_4938_896B_9D98CAA06F02_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT2</td><td/><td/><td>_2CFEB0DF_65FE_4ADD_9C9E_E9D86B103D8A_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT3</td><td/><td/><td>_6E280CB8_A235_4765_B6FB_22DE875AAD03_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT4</td><td/><td/><td>_1D9FDACB_2B08_4917_870A_3D3EA8D663AE_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT5</td><td/><td/><td>_6AA819B7_F8A8_4968_BDE3_964E7332B08F_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ImageClassLib.dll</td><td/><td/><td>_9D3861C8_AA5E_4832_9ADE_5432C8B841BE_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>IrisSkin2.dll</td><td/><td/><td>_D845061A_D2C1_440A_A120_998C7DF80593_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>MySql.Data.dll</td><td/><td/><td>_DEB32761_F764_4A7F_B69E_C66FEB234BB5_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT1</td><td/><td/><td>_46984447_62B7_4B25_80A9_B4EB03B3A39F_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT2</td><td/><td/><td>_87319383_5591_413D_9847_781FF8E591D1_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT3</td><td/><td/><td>_188DADEB_B740_4213_AEF7_6CF1255B515A_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT4</td><td/><td/><td>_FF04D0A1_46D6_409F_9556_ADBBA9743B7B_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT5</td><td/><td/><td>_64733B48_8461_45CD_9314_5C2AE810451D_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT6</td><td/><td/><td>_B5FB9F13_3088_4FF3_AA39_58BA4B3388AD_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT7</td><td/><td/><td>_7621D4EE_3C55_445A_A9C8_CF585CDE7994_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT8</td><td/><td/><td>_50CDF573_49D1_495E_BEEE_527C8F234A0D_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT9</td><td/><td/><td>_4499D913_7924_4580_A795_DF368AE5C73C_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ImageClassLib.dll</td><td/><td/><td>_C5AD05CA_BF38_4D14_B05A_DAEA56EC60A1_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Interop.WIA.dll</td><td/><td/><td>_46E02456_01CF_4825_A5D2_EFB4CE51A1A6_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>IrisSkin2.dll</td><td/><td/><td>_303F5C61_2E26_4498_B5CC_3D575E55AB5D_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>MySql.Data.dll</td><td/><td/><td>_437E194E_BFBF_468A_951A_D885928D56BE_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>NewComponent1</td><td/><td/><td>_DE54A91F_8158_4F40_8089_94D599268E95_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>PicFile_Managerment.exe</td><td/><td/><td>_4EAF55C9_E702_4981_9AFD_96A2BDE47BEE_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>PicFile_Managerment.vshost.exe</td><td/><td/><td>_5571CA75_20C9_48C6_B8AF_560847C828BE_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ThoughtWorks.QRCode.dll</td><td/><td/><td>_0556DC67_B089_449A_9D24_840F32A78614_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>WeifenLuo.WinFormsUI.Docking.dll</td><td/><td/><td>_E2247162_AA1C_44C2_B9C1_E91469890419_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>log4net.dll</td><td/><td/><td>_B32A8D6D_80A1_4317_B960_BDEF6040F9DF_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>PicFile_Managerment.exe</td><td/><td/><td>_E9E72898_4D2E_46C5_8DAB_ECC6EBA04EFC_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>PicFile_Managerment.vshost.exe</td><td/><td/><td>_1C5E3124_38F0_4646_A4F7_9F574723966F_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ThoughtWorks.QRCode.dll</td><td/><td/><td>_16138D67_6769_4749_B2B2_E93640C44C57_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>WeifenLuo.WinFormsUI.Docking.dll</td><td/><td/><td>_BB644E51_99BF_4398_8AF0_930F708DBEC1_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>itextsharp.dll</td><td/><td/><td>_25107425_515E_4451_88F4_E6C74E2A9582_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>log4net.dll</td><td/><td/><td>_16FE9D4E_26A6_404F_8D84_0D2DE5FF1D70_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="ISCustomActionReference">
@@ -2547,6 +2582,7 @@
 		<row><td>ISProductFolder</td><td/><td/><td>1</td></row>
 		<row><td>ISProjectDataFolder</td><td/><td/><td>1</td></row>
 		<row><td>ISProjectFolder</td><td/><td/><td>1</td></row>
+		<row><td>PicFile_Managerment</td><td>PicFile_Managerment\PicFile_Managerment.csproj</td><td/><td>2</td></row>
 		<row><td>ProgramFilesFolder</td><td/><td/><td>1</td></row>
 		<row><td>SystemFolder</td><td/><td/><td>1</td></row>
 		<row><td>WindowsFolder</td><td/><td/><td>1</td></row>
@@ -3671,6 +3707,10 @@
 		<row><td>IDS_SETUPEXE_EXPIRE_MSG</td><td>2052</td><td>本安装程序的使用期到 %s 结束。安装程序现在将退出。</td><td>0</td><td/><td>614858954</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME1</td><td>1033</td><td/><td>0</td><td/><td>614881514</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME1</td><td>2052</td><td>BJ_FAautomaion.exe</td><td>0</td><td/><td>614875402</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME10</td><td>1033</td><td/><td>0</td><td/><td>363247017</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME10</td><td>2052</td><td>Managerment.exe</td><td>0</td><td/><td>363202217</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME11</td><td>1033</td><td/><td>0</td><td/><td>363247017</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME11</td><td>2052</td><td>LAUNCH~1.EXE|Launch PicFile_Managerment.vshost.exe</td><td>0</td><td/><td>363247017</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME2</td><td>1033</td><td/><td>0</td><td/><td>614881514</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME2</td><td>2052</td><td>LAUNCH~1.EXE|Launch BJ_FAautomaion.vshost.exe</td><td>0</td><td/><td>614881514</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME3</td><td>1033</td><td/><td>0</td><td/><td>614912522</td></row>
@@ -3685,6 +3725,8 @@
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME7</td><td>2052</td><td>PicFile_Managerment.exe</td><td>0</td><td/><td>-1255800150</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME8</td><td>1033</td><td/><td>0</td><td/><td>-1255758007</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME8</td><td>2052</td><td>LAUNCH~1.EXE|Launch PicFile_Managerment.vshost.exe</td><td>0</td><td/><td>-1255758007</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME9</td><td>1033</td><td/><td>0</td><td/><td>363247017</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME9</td><td>2052</td><td>LAUNCH~1.EXE|Launch BJ_FAautomaion.vshost.exe</td><td>0</td><td/><td>363247017</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO</td><td>2052</td><td>从以下服务器列表中选择要连接的数据库服务器。</td><td>0</td><td/><td>614858954</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_DB</td><td>2052</td><td>从以下的编录名称列表中，选择您希望将其作为目标的数据库编录。</td><td>0</td><td/><td>614858954</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_TEMPLATE</td><td>2052</td><td>[IS_SQLBROWSE_INTRO]</td><td>0</td><td/><td>614858954</td></row>
@@ -3979,6 +4021,8 @@
 		<row><td>ID_STRING3</td><td>2052</td><td>BJ_FAautomaion.exe</td><td>0</td><td/><td>614875402</td></row>
 		<row><td>ID_STRING4</td><td>1033</td><td>PicFile_Managerment.exe</td><td>0</td><td/><td>-1255798102</td></row>
 		<row><td>ID_STRING4</td><td>2052</td><td>PicFile_Managerment.exe</td><td>0</td><td/><td>-1255798102</td></row>
+		<row><td>ID_STRING5</td><td>1033</td><td>Managerment.exe</td><td>0</td><td/><td>363206313</td></row>
+		<row><td>ID_STRING5</td><td>2052</td><td>Managerment.exe</td><td>0</td><td/><td>363206313</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>2052</td><td>系统将不安装此功能。</td><td>0</td><td/><td>614858954</td></row>
 	</table>
 
@@ -4091,11 +4135,15 @@
 		<row><td>BJ_FAautomaion.exe_8915FEED50F54F1AADCC9ADB0E93DD60.exe</td><td/><td>D:\Dev Project\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\bin\Debug\BJ_FAautomaion.exe</td><td>0</td></row>
 		<row><td>BJ_FAautomaion.exe_B3A8C4DAB8254AC69A5311F027F83BE8.exe</td><td/><td>D:\Dev Project\BJ_FA\BJ_FAautomaion\BJ_FAautomaion\bin\Debug\BJ_FAautomaion.exe</td><td>0</td></row>
 		<row><td>BJ_FAautomaion.exe_BBFDD091B6884BF5A8A1E7081A9834FC.exe</td><td/><td>D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\BJ_FAautomaion.exe</td><td>0</td></row>
+		<row><td>BJ_FAautomaion.vsh_054EF0A58763482E94369A6726FDDA57.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>BJ_FAautomaion.vsh_25FAC9C55B254C66A498FAE131067C59.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>BJ_FAautomaion.vsh_34AF11B40E03499EA7238A4151677AB6.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>PicFile_Managermen_1026034759374EB7AD4540D0B1D50928.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>PicFile_Managermen_3BDCCF0F77954B2F86D737EA78B27B45.exe</td><td/><td>D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\PicFile_Managerment.exe</td><td>0</td></row>
 		<row><td>PicFile_Managermen_4E3AB107FB0E41BCAA35E444157B6D09.exe</td><td/><td>D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\PicFile_Managerment.exe</td><td>0</td></row>
+		<row><td>PicFile_Managermen_942DCE7FF44446919F6E63EC130D1019.exe</td><td/><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\PicFile_Managerment.exe</td><td>0</td></row>
+		<row><td>PicFile_Managermen_BE9F33AC67A74891AB1901ECA0C3E645.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
+		<row><td>PicFile_Managermen_FB9AD4A5BA4E4867B337A31305DF18C4.exe</td><td/><td>D:\Devlop\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\PicFile_Managerment.exe</td><td>0</td></row>
 		<row><td>UNINST_Uninstall_F_C21852EAF85D4C6FBF3F6E508872F259.exe</td><td/><td>C:\Program Files (x86)\InstallShield\2012SpringLE\Redist\Language Independent\OS Independent\uninstall.ico</td><td>0</td></row>
 	</table>
 
@@ -4678,6 +4726,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="L255">FileName</col>
 		<col def="s72">DirProperty</col>
 		<col def="i2">InstallMode</col>
+		<row><td>BJ_FAautomaion.vshost.exe</td><td>BJ_FAautomaion.vshost.exe</td><td/><td>faauto_1_fa_auto</td><td>2</td></row>
 		<row><td>PicFile_Managerment.exe</td><td>PicFile_Managerment.exe</td><td/><td>faauto_1_fa_auto</td><td>2</td></row>
 		<row><td>PicFile_Managerment.vshost.exe</td><td>PicFile_Managerment.vshost.exe</td><td/><td>faauto_1_fa_auto</td><td>2</td></row>
 		<row><td>UNINST_Uninstall_FA_Auto</td><td>NewComponent1</td><td/><td>faauto_1_fa_auto</td><td>2</td></row>
@@ -4766,9 +4815,10 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">ISComments</col>
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
-		<row><td>PicFile_Managerment.exe</td><td>faauto_1_fa_auto</td><td>##IDS_SHORTCUT_DISPLAY_NAME7##</td><td>PicFile_Managerment.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>PicFile_Managermen_3BDCCF0F77954B2F86D737EA78B27B45.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>PicFile_Managerment.exe1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME7##</td><td>PicFile_Managerment.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>PicFile_Managermen_4E3AB107FB0E41BCAA35E444157B6D09.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>PicFile_Managerment.vshost.exe</td><td>faauto_1_fa_auto</td><td>##IDS_SHORTCUT_DISPLAY_NAME8##</td><td>PicFile_Managerment.vshost.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>PicFile_Managermen_1026034759374EB7AD4540D0B1D50928.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>BJ_FAautomaion.vshost.exe</td><td>faauto_1_fa_auto</td><td>##IDS_SHORTCUT_DISPLAY_NAME9##</td><td>BJ_FAautomaion.vshost.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>BJ_FAautomaion.vsh_054EF0A58763482E94369A6726FDDA57.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>PicFile_Managerment.exe</td><td>faauto_1_fa_auto</td><td>##IDS_SHORTCUT_DISPLAY_NAME10##</td><td>PicFile_Managerment.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>PicFile_Managermen_942DCE7FF44446919F6E63EC130D1019.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>PicFile_Managerment.exe1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME10##</td><td>PicFile_Managerment.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>PicFile_Managermen_FB9AD4A5BA4E4867B337A31305DF18C4.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>PicFile_Managerment.vshost.exe</td><td>faauto_1_fa_auto</td><td>##IDS_SHORTCUT_DISPLAY_NAME11##</td><td>PicFile_Managerment.vshost.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>PicFile_Managermen_BE9F33AC67A74891AB1901ECA0C3E645.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>UNINST_Uninstall_FA_Auto</td><td>faauto_1_fa_auto</td><td>UNINST|Uninstall FA Auto</td><td>NewComponent1</td><td>[SystemFolder]msiexec.exe</td><td>/x {A4FA0FDA-9195-4A2B-B938-0CE7F42F06EC}</td><td/><td/><td>UNINST_Uninstall_F_C21852EAF85D4C6FBF3F6E508872F259.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>
 

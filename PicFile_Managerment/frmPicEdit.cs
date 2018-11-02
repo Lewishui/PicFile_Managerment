@@ -17,6 +17,7 @@ using ThoughtWorks.QRCode.Codec;
 using System.IO;
 using FA.Buiness;
 using FA.DB;
+using FA.Common;
 namespace PicFile_Managerment
 {
     public partial class frmPicEdit : Form
@@ -89,20 +90,22 @@ namespace PicFile_Managerment
         private int deleteNumber = 0;
         #endregion
 
-
-
-
         List<clsAccFileinfo> dailyResult;
         bool Track_move = false;
-        public frmPicEdit(string id)
+        public string savefilepath;
+        List<string> filename;
+        int comboxi;
+        string comboxiname;
+        clsFile_Managermentinfo selcetitem;
+
+
+        public frmPicEdit(string id, clsFile_Managermentinfo selcetitem1)
         {
             InitializeComponent();
+            selcetitem = selcetitem1;
             InitializeDataSource(id);
             this.pictureBox1.MouseWheel += new MouseEventHandler(pictureBox1_MouseWheel);
-
-
-
-
+            InitializeListView();
         }
 
         private void InitializeDataSource(string id)
@@ -134,17 +137,23 @@ namespace PicFile_Managerment
                     {
                         imageListSmall.Images.Add(Image.FromFile(item.mark1));
 
-                        imageListSmall.ImageSize = new Size(64, 64);// new Point(32, 32);
+                        imageListSmall.ImageSize = new Size(64, 128);// new Point(32, 32);
                     }
                 }
                 listView1.View = View.LargeIcon;
                 listView1.LargeImageList = imageListSmall;
 
+                int Index = 1;
                 foreach (clsAccFileinfo item in dailyResult)
                 {
-                    listView1.Items.Add(System.IO.Path.GetFileName(item.mark1));
-                    listView1.Items[i].ImageIndex = i;
-                    i++;
+                    if (File.Exists(item.mark1))
+                    {
+                        //  listView1.Items.Add(System.IO.Path.GetFileName(item.mark1));
+                        listView1.Items.Add(Index.ToString());
+                        listView1.Items[i].ImageIndex = i;
+                        i++;
+                        Index++;
+                    }
                 }
             }
             #endregion
@@ -1451,6 +1460,9 @@ PixelFormat.Format8bppIndexed
             {
                 int ddd = listView1.SelectedIndices[0];
                 ShowImage(dailyResult[this.listView1.SelectedItems[0].Index].mark1);
+                comboxi = ddd;
+                comboxiname = dailyResult[this.listView1.SelectedItems[0].Index].mark1.ToString();
+
             }
         }
 
@@ -1669,6 +1681,187 @@ PixelFormat.Format8bppIndexed
             //Rectangle rect = new Rectangle(p1, new Size(p2.X - p1.X, p2.Y - p1.Y));
             //e.Graphics.DrawRectangle(p, rect);
         }
+
+        private void toolStripButton12_Click(object sender, EventArgs e)
+        {
+
+            savefilepath = "";
+
+            var form = new frmScanMain();
+
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                savefilepath = form.savefilepath;
+
+            }
+            SavePIC();
+        }
+
+        private void SavePIC()
+        {
+            if (savefilepath != "")
+            {
+                clsAllnew buline = new clsAllnew();
+
+                List<string> filename = buline.GetBy_CategoryReportFileName(savefilepath);
+
+                List<clsAccFileinfo> accFile_Result = new List<clsAccFileinfo>();
+                for (int i = 0; i < filename.Count; i++)
+                {
+                    clsAccFileinfo temp = new clsAccFileinfo();
+                    if (i != 0)
+                        temp.mark1 += "," + filename[i];
+                    else
+                        temp.mark1 += filename[i];
+                    temp.File_name = System.IO.Path.GetFileName(temp.mark1);
+                    temp.accfile_id = dailyResult[0].accfile_id;
+                    string serverimg = temp.mark1.Replace(temp.mark1 + "\\", "");
+                    string copyToPath = clsCommHelp.LocationImagePath(temp);
+                    File.Copy(temp.mark1.Replace(",", ""), copyToPath, true);
+                    temp.mark1 = copyToPath;
+                    accFile_Result.Add(temp);
+                }
+                //更新 文档信息
+                List<clsFile_Managermentinfo> File_Result = new List<clsFile_Managermentinfo>();
+                selcetitem.yeshu = accFile_Result.Count.ToString();
+
+                File_Result.Add(selcetitem);
+                if (selcetitem != null)
+                {
+                    buline.Update_File_detail_Server(File_Result);
+                }
+                buline.InsteraccFile_Server(accFile_Result);
+                InitializeDataSource(dailyResult[0].accfile_id);
+            }
+        }
+
+
+        #region listView1
+        // 初始化listView1.  
+        private void InitializeListView()
+        {
+            listView1.AllowDrop = true;
+            listView1.ListViewItemSorter = new ListViewIndexComparer();
+            //初始化插入标记  
+            listView1.InsertionMark.Color = Color.Red;
+            //  
+            listView1.ItemDrag += listView1_ItemDrag;
+            listView1.DragEnter += listView1_DragEnter;
+            listView1.DragOver += listView1_DragOver;
+            listView1.DragLeave += listView1_DragLeave;
+            listView1.DragDrop += listView1_DragDrop;
+        }
+
+        // 当一个项目拖拽是启动拖拽操作  
+        void listView1_ItemDrag(object sender, ItemDragEventArgs e)
+        {
+            Dictionary<ListViewItem, int> itemsCopy = new Dictionary<ListViewItem, int>();
+            foreach (ListViewItem item in listView1.SelectedItems)
+                itemsCopy.Add(item, item.Index);
+            listView1.DoDragDrop(itemsCopy, DragDropEffects.Move);
+
+            reselect();
+        }
+
+        void listView1_DragEnter(object sender, DragEventArgs e)
+        {
+            e.Effect = e.AllowedEffect;
+        }
+
+        //像拖拽项目一样移动插入标记  
+        void listView1_DragOver(object sender, DragEventArgs e)
+        {
+            // 获得鼠标坐标  
+            Point point = listView1.PointToClient(new Point(e.X, e.Y));
+            // 返回离鼠标最近的项目的索引  
+            int index = listView1.InsertionMark.NearestIndex(point);
+            // 确定光标不在拖拽项目上  
+            if (index > -1)
+            {
+                Rectangle itemBounds = listView1.GetItemRect(index);
+                if (point.X > itemBounds.Left + (itemBounds.Width / 2))
+                {
+                    listView1.InsertionMark.AppearsAfterItem = true;
+                }
+                else
+                {
+                    listView1.InsertionMark.AppearsAfterItem = false;
+                }
+            }
+            listView1.InsertionMark.Index = index;
+        }
+
+        // 当鼠标离开控件时移除插入标记  
+        void listView1_DragLeave(object sender, EventArgs e)
+        {
+            listView1.InsertionMark.Index = -1;
+        }
+
+        // 将项目移到插入标记所在的位置  
+        void listView1_DragDrop(object sender, DragEventArgs e)
+        {
+            // 返回插入标记的索引值  
+            int index = listView1.InsertionMark.Index;
+            // 如果插入标记不可见，则退出.  
+            if (index == -1)
+            {
+                return;
+            }
+            // 如果插入标记在项目的右面，使目标索引值加一  
+            if (listView1.InsertionMark.AppearsAfterItem)
+            {
+                index++;
+            }
+
+            // 返回拖拽项  
+            Dictionary<ListViewItem, int> items = (Dictionary<ListViewItem, int>)e.Data.GetData(typeof(Dictionary<ListViewItem, int>));
+            foreach (var item in items)
+            {
+                //在目标索引位置插入一个拖拽项目的副本   
+                listView1.Items.Insert(index, (ListViewItem)item.Key.Clone());
+                // 移除拖拽项目的原文件  
+                listView1.Items.Remove(item.Key);
+                if (item.Value >= index) index++;
+            }
+        }
+
+        // 对ListView里的各项根据索引进行排序  
+        class ListViewIndexComparer : System.Collections.IComparer
+        {
+            public int Compare(object x, object y)
+            {
+                return ((ListViewItem)x).Index - ((ListViewItem)y).Index;
+            }
+        }
+
+        private void reselect()
+        {
+            int index = 1;
+            for (int i = 0; i < listView1.Items.Count; i++)
+            {
+                listView1.Items[i].Text = index.ToString();
+                index++;
+
+            }
+        }
+
+        #endregion
+
+        private void 删除ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dailyResult.RemoveAt(comboxi);
+
+            // filename.RemoveAt(comboxi);
+            listView1.Items.RemoveAt(comboxi);
+            listView1.Items.Clear();
+            clsAllnew BusinessHelp = new clsAllnew();
+
+            BusinessHelp.deleteaccFil(dailyResult[0].accfile_id);
+            BusinessHelp.InsteraccFile_Server(dailyResult);
+
+            InitializeDataSource(dailyResult[0].accfile_id);
+        }
+
     }
 
 
