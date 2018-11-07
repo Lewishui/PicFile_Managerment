@@ -129,3 +129,7 @@ F:\mysteap\Devpro\PIC_control\PicFile_Managerment\PicFile_Managerment\obj\Debug\
 F:\mysteap\Devpro\PIC_control\PicFile_Managerment\PicFile_Managerment\obj\Debug\PicFile_Managerment.frmWater.resources
 F:\mysteap\Devpro\PIC_control\PicFile_Managerment\PicFile_Managerment\obj\Debug\PicFile_Managerment.Properties.Resources.resources
 F:\mysteap\Devpro\PIC_control\PicFile_Managerment\PicFile_Managerment\obj\Debug\PicFile_Managerment.csproj.GenerateResource.Cache
+D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\Interop.WIA.dll
+D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\bin\Debug\itextsharp.dll
+D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\obj\Debug\PicFile_Managerment.frmAutoScan.resources
+D:\Dev Project\PIC_control\PicFile_Managerment\PicFile_Managerment\obj\Debug\PicFile_Managerment.frmScanMain.resources

@@ -18,6 +18,7 @@ using System.IO;
 using FA.Buiness;
 using FA.DB;
 using FA.Common;
+using System.Runtime.InteropServices;
 namespace PicFile_Managerment
 {
     public partial class frmPicEdit : Form
@@ -58,7 +59,17 @@ namespace PicFile_Managerment
         Point p3;   //定义松开鼠标时的坐标点
         #endregion
         ImageCut1 IC1;  //定义所画矩形的图像对像
+        #region MyRegion
+        [DllImport("kernel32.dll")]
+        public static extern IntPtr _lopen(string lpPathName, int iReadWrite);
 
+        [DllImport("kernel32.dll")]
+        public static extern bool CloseHandle(IntPtr hObject);
+
+        public const int OF_READWRITE = 2;
+        public const int OF_SHARE_DENY_NONE = 0x40;
+        public readonly IntPtr HFILE_ERROR = new IntPtr(-1);
+        #endregion
 
 
         public Bitmap img1;
@@ -97,6 +108,7 @@ namespace PicFile_Managerment
         int comboxi;
         string comboxiname;
         clsFile_Managermentinfo selcetitem;
+        int addPICtype = 0;
 
 
         public frmPicEdit(string id, clsFile_Managermentinfo selcetitem1)
@@ -187,7 +199,26 @@ namespace PicFile_Managerment
                 //{
                 //    pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
                 //}
-                ShowImage(fullname);
+                filename = new List<string>();
+
+                foreach (string s in OpenFileDialog1.SafeFileNames)
+                {
+                    filename.Add(OpenFileDialog1.FileName);
+                }
+                if (dailyResult.Count == 0)
+                {
+                    string ACCid = clsCommHelp.RandomID();
+                    clsAccFileinfo item = new clsAccFileinfo();
+                    item.accfile_id = ACCid;
+                    selcetitem.accfile_id = ACCid.ToString();
+                    dailyResult.Add(item);
+
+                }
+                addPICtype = 1;
+
+
+                SavePIC();
+                // ShowImage(fullname);
             }
         }
 
@@ -274,21 +305,32 @@ namespace PicFile_Managerment
             }
             if (sfd.ShowDialog() == DialogResult.OK)
             {
-                if (img != null)
+                try
                 {
-                    fullname = sfd.FileName;
-                    switch (sfd.FilterIndex)
+                    if (img != null)
                     {
-                        case 1: img.Save(sfd.FileName, System.Drawing.Imaging.ImageFormat.Jpeg); break;
-                        case 2: img.Save(sfd.FileName, System.Drawing.Imaging.ImageFormat.Bmp); break;
-                        case 3: img.Save(sfd.FileName, System.Drawing.Imaging.ImageFormat.Gif); break;
-                        case 4: img.Save(sfd.FileName, System.Drawing.Imaging.ImageFormat.Png); break;
-                        case 5: img.Save(sfd.FileName, System.Drawing.Imaging.ImageFormat.Tiff); break;
-                        case 6: img.Save(sfd.FileName, System.Drawing.Imaging.ImageFormat.Icon); break;
+                        fullname = sfd.FileName;
+                        switch (sfd.FilterIndex)
+                        {
+
+
+                            case 1: img.Save(sfd.FileName, ImageFormat.Jpeg); break;//img.Save(sfd.FileName, System.Drawing.Imaging.ImageFormat.Jpeg); break;
+                            case 2: img.Save(sfd.FileName, System.Drawing.Imaging.ImageFormat.Bmp); break;
+                            case 3: img.Save(sfd.FileName, System.Drawing.Imaging.ImageFormat.Gif); break;
+                            case 4: img.Save(sfd.FileName, System.Drawing.Imaging.ImageFormat.Png); break;
+                            case 5: img.Save(sfd.FileName, System.Drawing.Imaging.ImageFormat.Tiff); break;
+                            case 6: img.Save(sfd.FileName, System.Drawing.Imaging.ImageFormat.Icon); break;
+
+                        }
+                        MessageBox.Show("保存成功！");
 
                     }
-                    MessageBox.Show("保存成功！");
-
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("当前文件正在被使用，请换路径保存");
+                    return;
+                   
                 }
             }
         }
@@ -1693,34 +1735,76 @@ PixelFormat.Format8bppIndexed
             if (form.ShowDialog() == DialogResult.OK)
             {
                 savefilepath = form.savefilepath;
-
+                addPICtype = 2;
             }
             SavePIC();
         }
 
         private void SavePIC()
         {
-            if (savefilepath != "")
+            if (savefilepath != "" && dailyResult[0].accfile_id != null && dailyResult[0].accfile_id != "")
             {
                 clsAllnew buline = new clsAllnew();
-
-                List<string> filename = buline.GetBy_CategoryReportFileName(savefilepath);
-
                 List<clsAccFileinfo> accFile_Result = new List<clsAccFileinfo>();
-                for (int i = 0; i < filename.Count; i++)
+
+                if (addPICtype == 2)//扫描上传
                 {
-                    clsAccFileinfo temp = new clsAccFileinfo();
-                    if (i != 0)
-                        temp.mark1 += "," + filename[i];
-                    else
-                        temp.mark1 += filename[i];
-                    temp.File_name = System.IO.Path.GetFileName(temp.mark1);
-                    temp.accfile_id = dailyResult[0].accfile_id;
-                    string serverimg = temp.mark1.Replace(temp.mark1 + "\\", "");
-                    string copyToPath = clsCommHelp.LocationImagePath(temp);
-                    File.Copy(temp.mark1.Replace(",", ""), copyToPath, true);
-                    temp.mark1 = copyToPath;
-                    accFile_Result.Add(temp);
+                    List<string> filename = buline.GetBy_CategoryReportFileName(savefilepath);
+
+                    for (int i = 0; i < filename.Count; i++)
+                    {
+                        clsAccFileinfo temp = new clsAccFileinfo();
+                        if (i != 0)
+                            temp.mark1 += "," + filename[i];
+                        else
+                            temp.mark1 += filename[i];
+                        temp.File_name = System.IO.Path.GetFileName(temp.mark1);
+                        temp.accfile_id = dailyResult[0].accfile_id;
+                        string serverimg = temp.mark1.Replace(temp.mark1 + "\\", "");
+                        string copyToPath = clsCommHelp.LocationImagePath(temp);
+                        File.Copy(temp.mark1.Replace(",", ""), copyToPath, true);
+                        temp.mark1 = copyToPath;
+                        accFile_Result.Add(temp);
+                    }
+                }
+                else if (addPICtype == 1)//打开图片上传
+                {
+                    for (int i = 0; i < filename.Count; i++)
+                    {
+                        clsAccFileinfo temp = new clsAccFileinfo();
+
+                        if (i != 0)
+                            temp.mark1 += "," + filename[i];
+                        else
+                            temp.mark1 += filename[i];
+                        temp.File_name = System.IO.Path.GetFileName(temp.mark1);
+                        temp.accfile_id = dailyResult[0].accfile_id;
+                        {
+                            string serverimg = temp.mark1.Replace(temp.mark1 + "\\", "");
+                            string copyToPath = clsCommHelp.LocationImagePath(temp);
+                            //if (File.Exists(copyToPath))
+                            {
+                                //IntPtr vHandle = _lopen(copyToPath, OF_READWRITE | OF_SHARE_DENY_NONE);
+                                //if (vHandle == HFILE_ERROR)
+                                //{
+                                //    MessageBox.Show(copyToPath+"   文件被占用！");
+                                //    continue;
+                                //}
+                                try
+                                {
+                                    File.Copy(temp.mark1.Replace(",", ""), copyToPath, true);
+                                }
+                                catch
+                                {
+
+                                }
+                            }
+                            temp.mark1 = copyToPath;
+                        }
+                        accFile_Result.Add(temp);
+
+                    }
+
                 }
                 //更新 文档信息
                 List<clsFile_Managermentinfo> File_Result = new List<clsFile_Managermentinfo>();

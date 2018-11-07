@@ -1050,17 +1050,19 @@ namespace PicFile_Managerment
 
         private void 编辑图片ToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            var oids = GetOrderIdsBySelectedGridCell();
-            if (oids.Count > 0 && selcetitem!=null)
-            {
+            //var oids = GetOrderIdsBySelectedGridCell();
+            //if (oids.Count > 0 && selcetitem!=null)
+            //{
 
-                var form = new frmPicEdit(oids[0].ToString(), selcetitem);
+            //    var form = new frmPicEdit(oids[0].ToString(), selcetitem);
 
-                if (form.ShowDialog() == DialogResult.OK)
-                {
+            //    if (form.ShowDialog() == DialogResult.OK)
+            //    {
 
-                }
-            }
+            //    }
+            //}
+            编辑图片ToolStripMenuItem_Click(null, EventArgs.Empty);
+
         }
 
         private void 编辑属性ToolStripMenuItem1_Click(object sender, EventArgs e)
