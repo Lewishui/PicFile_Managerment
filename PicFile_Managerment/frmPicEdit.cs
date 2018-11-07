@@ -117,7 +117,8 @@ namespace PicFile_Managerment
 
             clsAllnew BusinessHelp = new clsAllnew();
             dailyResult = new List<clsAccFileinfo>();
-            dailyResult = BusinessHelp.find_ACCFile(conditions);
+            if (id != null)
+                dailyResult = BusinessHelp.find_ACCFile(conditions);
             #region listView1
             this.listView1.Items.Clear();
             if (dailyResult != null)

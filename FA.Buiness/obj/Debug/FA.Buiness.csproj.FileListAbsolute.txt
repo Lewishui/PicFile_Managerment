@@ -64,3 +64,16 @@ D:\Devlop\PIC_control\PicFile_Managerment\FA.Buiness\obj\Debug\FA.Buiness.csproj
 D:\Devlop\PIC_control\PicFile_Managerment\FA.Buiness\obj\Debug\FA.Buiness.dll
 D:\Devlop\PIC_control\PicFile_Managerment\FA.Buiness\obj\Debug\FA.Buiness.pdb
 D:\Devlop\PIC_control\PicFile_Managerment\FA.Buiness\bin\Debug\itextsharp.dll
+F:\mysteap\Devpro\PIC_control\PicFile_Managerment\FA.Buiness\bin\Debug\FA.Buiness.dll
+F:\mysteap\Devpro\PIC_control\PicFile_Managerment\FA.Buiness\bin\Debug\FA.Buiness.pdb
+F:\mysteap\Devpro\PIC_control\PicFile_Managerment\FA.Buiness\bin\Debug\FA.Common.dll
+F:\mysteap\Devpro\PIC_control\PicFile_Managerment\FA.Buiness\bin\Debug\FA.DB.dll
+F:\mysteap\Devpro\PIC_control\PicFile_Managerment\FA.Buiness\bin\Debug\log4net.dll
+F:\mysteap\Devpro\PIC_control\PicFile_Managerment\FA.Buiness\bin\Debug\MySql.Data.dll
+F:\mysteap\Devpro\PIC_control\PicFile_Managerment\FA.Buiness\bin\Debug\MySql.Data.Entity.dll
+F:\mysteap\Devpro\PIC_control\PicFile_Managerment\FA.Buiness\bin\Debug\itextsharp.dll
+F:\mysteap\Devpro\PIC_control\PicFile_Managerment\FA.Buiness\bin\Debug\FA.Common.pdb
+F:\mysteap\Devpro\PIC_control\PicFile_Managerment\FA.Buiness\bin\Debug\FA.DB.pdb
+F:\mysteap\Devpro\PIC_control\PicFile_Managerment\FA.Buiness\obj\Debug\FA.Buiness.csprojResolveAssemblyReference.cache
+F:\mysteap\Devpro\PIC_control\PicFile_Managerment\FA.Buiness\obj\Debug\FA.Buiness.dll
+F:\mysteap\Devpro\PIC_control\PicFile_Managerment\FA.Buiness\obj\Debug\FA.Buiness.pdb

@@ -178,7 +178,7 @@ namespace PicFile_Managerment
 
             if (form.ShowDialog() == DialogResult.OK)
             {
-
+                InitializeDataSource();
             }
 
         }
@@ -836,7 +836,7 @@ namespace PicFile_Managerment
         private void toolStripDropDownButton1_Click(object sender, EventArgs e)
         {
             var oids = GetOrderIdsBySelectedGridCell();
-            if (oids.Count > 0)
+            if (oids.Count > 0 && selcetitem!=null)
             {
 
                 var form = new frmPicEdit(oids[0].ToString(), selcetitem);
@@ -855,15 +855,29 @@ namespace PicFile_Managerment
 
         private void 编辑图片ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
             var oids = GetOrderIdsBySelectedGridCell();
+            var row = dataGridView.Rows[Rowindex];
+            selcetitem = new clsFile_Managermentinfo();
 
+            var model = row.DataBoundItem as clsFile_Managermentinfo;
+            selcetitem = model;
 
-            var form = new frmPicEdit(oids[0].ToString(), selcetitem);
-
-            if (form.ShowDialog() == DialogResult.OK)
+            if (selcetitem != null  )
             {
+                if (oids.Count < 1)
+                    oids.Add("");
 
+                var form = new frmPicEdit(oids[0], selcetitem);
+
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+
+                }
             }
+            else
+                MessageBox.Show("请选择条目");
+
 
         }
         private List<string> GetOrderIdsBySelectedGridCell()
@@ -1037,7 +1051,7 @@ namespace PicFile_Managerment
         private void 编辑图片ToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             var oids = GetOrderIdsBySelectedGridCell();
-            if (oids.Count > 0)
+            if (oids.Count > 0 && selcetitem!=null)
             {
 
                 var form = new frmPicEdit(oids[0].ToString(), selcetitem);

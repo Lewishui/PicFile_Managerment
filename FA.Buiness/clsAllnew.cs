@@ -158,7 +158,7 @@ namespace FA.Buiness
                 {
 
                     string sql = "";
-                    sql = "insert into File_Managerment(wenjianbiaohao,biaoti,wenhao,zhiwendanwei,xingwendanwei,dengjiriqi,miji,wenjianleibie,yeshu,fenshu,accfile_id,beizhu,NodeID,wenjianqiriqi,wenjianzhiriqi,baoguanqixian,beizhu1,beizhu2,beizhu3,beizhu4,beizhu5) values ('" + item.wenjianbiaohao + "','" + item.biaoti + "',N'" + item.wenhao + "','" + item.zhiwendanwei + "','" + item.xingwendanwei + "','" + item.dengjiriqi + "','" + item.miji + "','" + item.wenjianleibie + "',N'" + item.yeshu + "',N'" + item.fenshu + "',N'" + item.accfile_id + "',N'" + item.beizhu + "',N'" + item.NodeID + "','" + item.wenjianqiriqi + "','" + item.baoguanqixian + "','" + item.beizhu1 + "','" + item.beizhu2 + "','" + item.beizhu3 + "','" + item.beizhu4 + "','" + item.beizhu5 + "')";
+                    sql = "insert into File_Managerment(wenjianbiaohao,biaoti,wenhao,zhiwendanwei,xingwendanwei,dengjiriqi,miji,wenjianleibie,yeshu,fenshu,accfile_id,beizhu,NodeID,wenjianqiriqi,wenjianzhiriqi,baoguanqixian,beizhu1,beizhu2,beizhu3,beizhu4,beizhu5) values ('" + item.wenjianbiaohao + "','" + item.biaoti + "',N'" + item.wenhao + "','" + item.zhiwendanwei + "','" + item.xingwendanwei + "','" + item.dengjiriqi + "','" + item.miji + "','" + item.wenjianleibie + "',N'" + item.yeshu + "',N'" + item.fenshu + "',N'" + item.accfile_id + "',N'" + item.beizhu + "',N'" + item.NodeID + "','" + item.wenjianqiriqi + "','" + item.wenjianzhiriqi + "','" + item.baoguanqixian + "','" + item.beizhu1 + "','" + item.beizhu2 + "','" + item.beizhu3 + "','" + item.beizhu4 + "','" + item.beizhu5 + "')";
 
                     OleDbCommand cmd = new OleDbCommand(sql, con);
                     cmd.ExecuteNonQuery();
