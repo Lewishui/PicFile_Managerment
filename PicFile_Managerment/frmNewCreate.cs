@@ -298,7 +298,7 @@ namespace PicFile_Managerment
 
            // if (filename.Count > 0)
             {
-                if (iitem1.accfile_id != null && iitem1.accfile_id != "")
+                if (iitem1!=null&&iitem1.accfile_id != null && iitem1.accfile_id != "")
                 {
                     var form = new frmPicEdit(iitem1.accfile_id, iitem1);
 

@@ -174,6 +174,17 @@ namespace PicFile_Managerment
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
+            try
+            {
+                string aa = tree_Current_row["NodeID"].ToString();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("选择下方类目才可以添加信息");
+                return;
+                throw;
+            }
             var form = new frmNewCreate("", tree_Current_row, null);
 
             if (form.ShowDialog() == DialogResult.OK)
@@ -835,8 +846,14 @@ namespace PicFile_Managerment
 
         private void toolStripDropDownButton1_Click(object sender, EventArgs e)
         {
+            var row = dataGridView.Rows[Rowindex];
+            selcetitem = new clsFile_Managermentinfo();
+
+            var model = row.DataBoundItem as clsFile_Managermentinfo;
+            selcetitem = model;
+
             var oids = GetOrderIdsBySelectedGridCell();
-            if (oids.Count > 0 && selcetitem!=null)
+            if (oids.Count > 0 && selcetitem != null)
             {
 
                 var form = new frmPicEdit(oids[0].ToString(), selcetitem);
@@ -855,7 +872,7 @@ namespace PicFile_Managerment
 
         private void 编辑图片ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
             var oids = GetOrderIdsBySelectedGridCell();
             var row = dataGridView.Rows[Rowindex];
             selcetitem = new clsFile_Managermentinfo();
@@ -863,7 +880,7 @@ namespace PicFile_Managerment
             var model = row.DataBoundItem as clsFile_Managermentinfo;
             selcetitem = model;
 
-            if (selcetitem != null  )
+            if (selcetitem != null)
             {
                 if (oids.Count < 1)
                     oids.Add("");
