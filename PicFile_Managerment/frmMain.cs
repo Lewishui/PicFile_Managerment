@@ -853,7 +853,7 @@ namespace PicFile_Managerment
             selcetitem = model;
 
             var oids = GetOrderIdsBySelectedGridCell();
-            if (oids.Count > 0 && selcetitem != null)
+            if (oids.Count > 0 && selcetitem != null && oids[0]!=null)
             {
 
                 var form = new frmPicEdit(oids[0].ToString(), selcetitem);
